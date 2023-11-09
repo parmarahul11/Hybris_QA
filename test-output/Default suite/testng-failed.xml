@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="bay_Automation.PLPScenario">
+      <class name="bay_Automation.SearchProductTest">
         <methods>
           <include name="beforeConfig"/>
+          <include name="afterTest"/>
+          <include name="searchProductAndCheckAvailability" invocation-numbers="0"/>
           <include name="afterConfig"/>
-          <include name="endConfig"/>
-          <include name="compareIcon"/>
         </methods>
-      </class> <!-- bay_Automation.PLPScenario -->
+      </class> <!-- bay_Automation.SearchProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

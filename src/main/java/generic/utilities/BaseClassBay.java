@@ -38,12 +38,12 @@ public class BaseClassBay {
 		
 		if(BROWSER.equalsIgnoreCase("chrome")) {
 		
-		//	WebDriverManager.chromedriver().setup();
-			ChromeOptions opt=new ChromeOptions();
-			opt.addArguments("--remote-allow-origins=*");
-			opt.addArguments("--disable-notifications");
-			opt.addArguments("--start-maximized");
-			WebDriver driver=new ChromeDriver(opt);
+			WebDriverManager.chromedriver().setup();
+//			ChromeOptions opt=new ChromeOptions();
+//			opt.addArguments("--remote-allow-origins=*");
+//			opt.addArguments("--disable-notifications");
+//			opt.addArguments("--start-maximized");
+			WebDriver driver=new ChromeDriver(/*opt*/);
 		}
 		else if(BROWSER.equalsIgnoreCase("edge")) {
 			//System.getProperty("browser").equalsIgnoreCase("edge")
@@ -53,9 +53,9 @@ public class BaseClassBay {
 			driver=new EdgeDriver();
 		}
 		else {
-			ChromeOptions options=new ChromeOptions();
-			options.addArguments("--remote-allow-origins=*");
-			driver=new ChromeDriver(options);
+		//	ChromeOptions options=new ChromeOptions();
+		//	options.addArguments("--remote-allow-origins=*");
+			driver=new ChromeDriver(/*options*/);
 		} 
 			
 		driver.manage().window().maximize();
