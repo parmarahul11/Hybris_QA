@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="bay_Automation.SearchProductTest">
+      <class name="BAY_HomePageScenario.LoginWithOTPTest">
         <methods>
           <include name="beforeConfig"/>
-          <include name="afterTest"/>
-          <include name="searchProductAndCheckAvailability" invocation-numbers="0"/>
           <include name="afterConfig"/>
+          <include name="loginWithOTPTest"/>
         </methods>
-      </class> <!-- bay_Automation.SearchProductTest -->
+      </class> <!-- BAY_HomePageScenario.LoginWithOTPTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

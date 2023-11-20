@@ -1,50 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-09T12:01:18 IST" name="Suite" finished-at="2023-11-09T12:02:16 IST" duration-ms="58393">
+  <suite started-at="2023-11-20T14:48:42 IST" name="Default suite" finished-at="2023-11-20T14:49:00 IST" duration-ms="18112">
     <groups>
     </groups>
-    <test started-at="2023-11-09T12:01:18 IST" name="Test" finished-at="2023-11-09T12:02:16 IST" duration-ms="58393">
-      <class name="bay_Automation.BrowserCategoryHomepageGetText">
-        <test-method is-config="true" signature="beforeConfig()[pri:0, instance:bay_Automation.BrowserCategoryHomepageGetText@7fb4f2a9]" started-at="2023-11-09T12:01:48 IST" name="beforeConfig" finished-at="2023-11-09T12:02:12 IST" duration-ms="24251" status="PASS">
+    <test started-at="2023-11-20T14:48:42 IST" name="Default test" finished-at="2023-11-20T14:49:00 IST" duration-ms="18112">
+      <class name="BAY_HomePageScenario.LoginWithOTPTest">
+        <test-method is-config="true" signature="beforeConfig()[pri:0, instance:BAY_HomePageScenario.LoginWithOTPTest@3de8f619]" started-at="2023-11-20T14:48:42 IST" name="beforeConfig" finished-at="2023-11-20T14:48:48 IST" duration-ms="6521" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeConfig -->
-        <test-method signature="browseCategory()[pri:0, instance:bay_Automation.BrowserCategoryHomepageGetText@7fb4f2a9]" started-at="2023-11-09T12:02:12 IST" name="browseCategory" finished-at="2023-11-09T12:02:13 IST" duration-ms="731" status="PASS">
+        <test-method signature="loginWithOTPTest()[pri:0, instance:BAY_HomePageScenario.LoginWithOTPTest@3de8f619]" started-at="2023-11-20T14:48:48 IST" name="loginWithOTPTest" finished-at="2023-11-20T14:48:57 IST" duration-ms="8540" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browseCategory -->
-        <test-method is-config="true" signature="afterConfig()[pri:0, instance:bay_Automation.BrowserCategoryHomepageGetText@7fb4f2a9]" started-at="2023-11-09T12:02:13 IST" name="afterConfig" finished-at="2023-11-09T12:02:16 IST" duration-ms="3002" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterConfig -->
-      </class> <!-- bay_Automation.BrowserCategoryHomepageGetText -->
-      <class name="bay_Automation.SearchProductTest">
-        <test-method is-config="true" signature="beforeConfig()[pri:0, instance:bay_Automation.SearchProductTest@126253fd]" started-at="2023-11-09T12:01:18 IST" name="beforeConfig" finished-at="2023-11-09T12:01:41 IST" duration-ms="22707" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeConfig -->
-        <test-method signature="searchProductAndCheckAvailability(java.lang.String)[pri:0, instance:bay_Automation.SearchProductTest@126253fd]" started-at="2023-11-09T12:01:41 IST" name="searchProductAndCheckAvailability" data-provider="searchData" finished-at="2023-11-09T12:01:45 IST" duration-ms="4376" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[iphone]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchProductAndCheckAvailability -->
-        <test-method is-config="true" signature="afterConfig()[pri:0, instance:bay_Automation.SearchProductTest@126253fd]" started-at="2023-11-09T12:01:45 IST" name="afterConfig" finished-at="2023-11-09T12:01:48 IST" duration-ms="3002" status="PASS">
+        </test-method> <!-- loginWithOTPTest -->
+        <test-method is-config="true" signature="afterConfig()[pri:0, instance:BAY_HomePageScenario.LoginWithOTPTest@3de8f619]" started-at="2023-11-20T14:48:57 IST" name="afterConfig" finished-at="2023-11-20T14:49:00 IST" duration-ms="3008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterConfig -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:bay_Automation.SearchProductTest@126253fd]" started-at="2023-11-09T12:02:16 IST" name="afterTest" finished-at="2023-11-09T12:02:16 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- bay_Automation.SearchProductTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- BAY_HomePageScenario.LoginWithOTPTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
