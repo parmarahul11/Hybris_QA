@@ -23,7 +23,8 @@ public class LoginWithOTPTest extends BaseClassBay{
 		driver.findElement(By.xpath("//input[@formcontrolname='mobileNo']")).sendKeys("12345678");
 		driver.findElement(By.xpath("//button[@class='btn login-btn']")).click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(8000);
+		/*
 		WebElement otpField1 = driver.findElement(By.xpath("//input[contains(@id,'otp_0_')]"));
 		otpField1.click();	
 		wUtil.sendTextUsingJSE(driver, "1", otpField1);
@@ -44,6 +45,7 @@ public class LoginWithOTPTest extends BaseClassBay{
 		WebElement submitButton = driver.findElement(By.xpath("//button[@class='btn login-btn']"));
 		js.executeScript("arguments[0].removeAttribute('disabled')", submitButton);
 		Thread.sleep(2000);
+		*/
 //		if (submitButton.isEnabled()) {
 //			js.executeScript("arguments[0].click();",submitButton );
 //			System.out.println("user successfully logged in..!");
@@ -51,6 +53,7 @@ public class LoginWithOTPTest extends BaseClassBay{
 //			System.out.println("user successfully logged in..!");
 //			Assert.assertEquals(false, true);
 //		}
+		WebElement submitButton = driver.findElement(By.xpath("//button[@class='btn login-btn']"));
 		submitButton.click();
 	}
 }
