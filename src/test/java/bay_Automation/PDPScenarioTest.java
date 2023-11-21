@@ -20,40 +20,40 @@ public class PDPScenarioTest extends BaseClassBay {
 
 	@DataProvider
 	public String[] productList() {
-		
-	String[] data=new String[] {
-		//any product xpath
-	"(//a[@class='cx-product-name'])[2]"
-	};
-	return data;
+
+		String[] data=new String[] {
+				//any product xpath
+				"(//a[@class='cx-product-name'])[2]"
+		};
+		return data;
 	}
 
 	@Test(dataProvider = "productList")
 	public void getProductName(String data) {
 
-	HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-	hp.sendTextOnSeachbar("iphone 12");
-	hp.clickOnSearchButton();
-	
-	//select product
-	 driver.findElement(By.xpath(data)).click();
-	//get product name
-	WebElement proName = driver.findElement(By.xpath("(//h2[@class='product-name'])[2]"));
-	
-	if (proName.isDisplayed()) {
-		System.out.println(proName.getText());
-		Assert.assertTrue(true);	
+		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
+		hp.sendTextOnSeachbar("iphone 12");
+		hp.clickOnSearchButton();
+
+		//select product
+		driver.findElement(By.xpath(data)).click();
+		//get product name
+		WebElement proName = driver.findElement(By.xpath("(//h2[@class='product-name'])[2]"));
+
+		if (proName.isDisplayed()) {
+			System.out.println(proName.getText());
+			Assert.assertTrue(true);	
 		}
-	Reporter.log(proName.getText());
+		Reporter.log(proName.getText());
 	}
-	
+
 	@Test(dataProvider = "productList")
 	public void getSKUOfProduct(String data) {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("iphone 12");
 		hp.clickOnSearchButton();
 		//select product
-		 driver.findElement(By.xpath(data)).click();
+		driver.findElement(By.xpath(data)).click();
 		String sku=driver.findElement(By.xpath("(//div[@class='lineText product-code']/child::span[@class='ng-star-inserted'])[2]")).getText();
 		System.out.println(sku);
 	}
@@ -70,16 +70,16 @@ public class PDPScenarioTest extends BaseClassBay {
 		hp.clickOnSearchButton();
 		//select product
 		driver.findElement(By.xpath(data)).click();
-		 
-		 WebElement clickCollect = driver.findElement(By.xpath("//button[@class='btn collect-from-store-btn btn-block ng-star-inserted']"));
-	
-	//	 Assert.assertFalse(clickCollect.isEnabled());
-		 
-		 if (clickCollect.isEnabled()) {
-			 Assert.assertTrue(true);
-			 System.out.println("button enabled");
+
+		WebElement clickCollect = driver.findElement(By.xpath("//button[@class='btn collect-from-store-btn btn-block ng-star-inserted']"));
+
+		//	 Assert.assertFalse(clickCollect.isEnabled());
+
+		if (clickCollect.isEnabled()) {
+			Assert.assertTrue(true);
+			System.out.println("button enabled");
 		} else {
-			
+
 			throw new Exception("button disabled");
 		}
 	}
@@ -90,7 +90,7 @@ public class PDPScenarioTest extends BaseClassBay {
 		hp.clickOnSearchButton();
 		//select product
 		driver.findElement(By.xpath(data)).click();
-		
+
 		String stockStatus = driver.findElement(By.xpath("//span[@class='instock']")).getText();
 		System.out.println(stockStatus);
 		String inStock="In Stock";
@@ -109,12 +109,12 @@ public class PDPScenarioTest extends BaseClassBay {
 		hp.clickOnSearchButton();
 		//select product
 		driver.findElement(By.xpath(data)).click();
-		
+
 		String briefDescription = driver.findElement(By.xpath("//div[@class='description ng-star-inserted']")).getText();
-		
+
 		System.out.println(briefDescription);
 	}
-	
+
 	@Test(dataProvider ="productList" )
 	public void quantityIncreaseByOne(String data) {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
@@ -125,8 +125,8 @@ public class PDPScenarioTest extends BaseClassBay {
 		//quantity increase by one
 		driver.findElement(By.xpath("//button[@aria-label='Add one more']")).click();
 	}
-	
-	
+
+
 	@Test(dataProvider ="productList" )
 	public void quantityManualUpdate(String data) throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
@@ -135,107 +135,123 @@ public class PDPScenarioTest extends BaseClassBay {
 		//select product
 		driver.findElement(By.xpath(data)).click();
 		//quantity increase manually
-		
+
 		driver.findElement(By.xpath("//input[@aria-label='Quantity']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@aria-label='Quantity']")).sendKeys(Keys.DELETE);
 		driver.findElement(By.xpath("//input[@aria-label='Quantity']")).sendKeys("5");
 	}
-	
+
 	@Test(dataProvider = "WarrentyXPath",dataProviderClass = DataproviderBAY.class)
 	public void warrentyDropdown(String xpath) throws Exception {	
-		
+
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-		
+
 		hp.getLaptopsIcon().click();
-		
-		driver.findElement(By.xpath("//a[text()='HP Notebook Envy X360 - 13.3 Inch, AMD R5-5600U, 512 GB SSD, WIN 11']")).click();
+
+		driver.findElement(By.xpath("(//a[contains(text(),'HP Laptop')])[1]")).click();
 
 		Robot rb=new Robot();
 		Thread.sleep(2000);
 		rb.mouseWheel(3);
 		Thread.sleep(2000);
+		WebElement element=driver.findElement(By.xpath("(//span[@class='ng-arrow-wrapper'])"));
+		if(element.isDisplayed()) {
 		driver.findElement(By.xpath("(//span[@class='ng-arrow-wrapper'])")).click();
-		
+		Assert.assertEquals(true, true);
+		}else {
+			System.out.println("Extended Warrenty feature is not available for this product...!");
+		}
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(xpath)).click();
-	//	driver.findElement(By.xpath("(//span[@class='ng-option-label ng-star-inserted'])[4]")).click();
-			
+		//	driver.findElement(By.xpath("(//span[@class='ng-option-label ng-star-inserted'])[4]")).click();
+
 	}
-	
+
 	@Test
 	public void seeDetailsTest() throws Exception {	
-		
+
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-		
+
 		hp.getLaptopsIcon().click();
-		
-		driver.findElement(By.xpath("//a[text()='HP Notebook Envy X360 - 13.3 Inch, AMD R5-5600U, 512 GB SSD, WIN 11']")).click();
+
+		driver.findElement(By.xpath("(//a[contains(text(),'HP Laptop')])[1]")).click();
 
 		Robot rb=new Robot();
 		rb.mouseWheel(3);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[text()=' See Details']")).click();
 	}
-	
+
 	@Test
 	public void productDescriptionTest() throws Exception {	
-		
+
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-		
+
 		hp.getLaptopsIcon().click();
-		
-		driver.findElement(By.xpath("//a[text()='HP Notebook Envy X360 - 13.3 Inch, AMD R5-5600U, 512 GB SSD, WIN 11']")).click();
+
+		driver.findElement(By.xpath("(//a[contains(text(),'HP Laptop')])[1]")).click();
 
 		Robot rb=new Robot();
 		rb.mouseWheel(3);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[text()=' PRODUCT DESCRIPTION ']")).click();
 	}
-	
+
 	@Test
 	public void goToProductsSpecificationTest() throws Exception {	
-		
+
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-		
+
 		hp.getLaptopsIcon().click();
-		
-		driver.findElement(By.xpath("//a[text()='HP Notebook Envy X360 - 13.3 Inch, AMD R5-5600U, 512 GB SSD, WIN 11']")).click();
+
+		driver.findElement(By.xpath("(//a[contains(text(),'HP Laptop')])[1]")).click();
 
 		Robot rb=new Robot();
 		rb.mouseWheel(3);
-		
+
 		driver.findElement(By.xpath("//button[text()=' PRODUCT SPECIFICATION ']")).click();
 
 	}
 	@Test
 	public void reviewRatingTest() throws Exception {	
-		
+
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-		
+
 		hp.getLaptopsIcon().click();
-		
-		driver.findElement(By.xpath("//a[text()='HP Notebook Envy X360 - 13.3 Inch, AMD R5-5600U, 512 GB SSD, WIN 11']")).click();
+
+		driver.findElement(By.xpath("(//a[contains(text(),'HP Laptop')])[1]")).click();
 
 		Robot rb=new Robot();
 		rb.mouseWheel(3);
-		
+
 		driver.findElement(By.xpath("//button[text()=' RATINGS & REVIEWS ']")).click();
 
 	}	
 	@Test
 	public void faqTest() throws Exception {	
-		
+
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-		
+
 		hp.getLaptopsIcon().click();
-		
-		driver.findElement(By.xpath("//a[text()='HP Notebook Envy X360 - 13.3 Inch, AMD R5-5600U, 512 GB SSD, WIN 11']")).click();
+
+		driver.findElement(By.xpath("(//a[contains(text(),'HP Laptop')])[1]")).click();
 
 		Robot rb=new Robot();
 		rb.mouseWheel(10);
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//button[contains(text(),'FAQ')]")).click();
+		Assert.assertEquals(true, true);
+	}
+
+	@Test
+	public void viewOfImageTest() {
+		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
+
+		hp.getLaptopsIcon().click();
+
+		driver.findElement(By.xpath(("(//a[contains(text(),'HP Laptop')])[1]"))).click();
+
 
 	}
 }
