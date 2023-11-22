@@ -1,10 +1,14 @@
 package bay_Automation;
 
+import java.awt.AWTException;
 import java.awt.Robot;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
@@ -77,10 +81,10 @@ public class PDPScenarioTest extends BaseClassBay {
 
 		if (clickCollect.isEnabled()) {
 			Assert.assertTrue(true);
-			System.out.println("button enabled");
+			System.out.println("click and collect available for this product(button enabled)");
 		} else {
-
-			throw new Exception("button disabled");
+			System.out.println("click and collect not available for this product (button is disabled)");
+			Assert.assertTrue(false);
 		}
 	}
 	@Test(dataProvider = "productList")
@@ -113,33 +117,71 @@ public class PDPScenarioTest extends BaseClassBay {
 		String briefDescription = driver.findElement(By.xpath("//div[@class='description ng-star-inserted']")).getText();
 
 		System.out.println(briefDescription);
+		Assert.assertTrue(true);
 	}
 
 	@Test(dataProvider ="productList" )
 	public void quantityIncreaseByOne(String data) {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-		hp.sendTextOnSeachbar("iphone 12");
+		hp.sendTextOnSeachbar("Apple IPhone 15Pro");
 		hp.clickOnSearchButton();
 		//select product
 		driver.findElement(By.xpath(data)).click();
+		//click on add to cart button
+		driver.findElement(By.xpath("//button[@class='btn add-to-cart-btn btn-block ng-star-inserted']")).click();
+		
 		//quantity increase by one
 		driver.findElement(By.xpath("//button[@aria-label='Add one more']")).click();
-	}
+		
+		Assert.assertTrue(true);
+		
+		System.out.println("Quantity updated (plus) successfully !");
 
+	}
+	
+	@Test(dataProvider ="productList" )
+	public void quantityDecreaseByOne(String data) throws InterruptedException {
+		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
+		hp.sendTextOnSeachbar("Apple IPhone 15Pro");
+		hp.clickOnSearchButton();
+		//select product
+		driver.findElement(By.xpath(data)).click();
+		//click on add to cart button
+		driver.findElement(By.xpath("//button[@class='btn add-to-cart-btn btn-block ng-star-inserted']")).click();
+		//quantity increase by one
+		driver.findElement(By.xpath("//button[@aria-label='Add one more']")).click();
+		//quantity decrease by one
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+		//identify minus button element				
+		WebElement minusButton = driver.findElement(By.xpath("//button[@aria-label='Remove one']"));
+		//wait for to element to load
+		wait.until(ExpectedConditions.elementToBeClickable(minusButton));
+		minusButton.click();
+		Thread.sleep(2000);
+		Assert.assertTrue(true);
+		
+		System.out.println("Quantity updated(minus) successfully !");
+
+	}
 
 	@Test(dataProvider ="productList" )
 	public void quantityManualUpdate(String data) throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-		hp.sendTextOnSeachbar("iphone 12");
+		hp.sendTextOnSeachbar("Apple IPhone 15Pro");
 		hp.clickOnSearchButton();
 		//select product
 		driver.findElement(By.xpath(data)).click();
+		//add to cart
+		driver.findElement(By.xpath("//button[@class='btn add-to-cart-btn btn-block ng-star-inserted']")).click();
 		//quantity increase manually
-
 		driver.findElement(By.xpath("//input[@aria-label='Quantity']")).click();
+		
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@aria-label='Quantity']")).sendKeys(Keys.DELETE);
 		driver.findElement(By.xpath("//input[@aria-label='Quantity']")).sendKeys("5");
+		
+		Assert.assertTrue(true);
+		System.out.println("Quantity updated successfully !");
 	}
 
 	@Test(dataProvider = "WarrentyXPath",dataProviderClass = DataproviderBAY.class)
@@ -156,14 +198,17 @@ public class PDPScenarioTest extends BaseClassBay {
 		rb.mouseWheel(3);
 		Thread.sleep(2000);
 		WebElement element=driver.findElement(By.xpath("(//span[@class='ng-arrow-wrapper'])"));
+		
 		if(element.isDisplayed()) {
 		driver.findElement(By.xpath("(//span[@class='ng-arrow-wrapper'])")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath(xpath)).click();
+		
 		Assert.assertEquals(true, true);
 		}else {
 			System.out.println("Extended Warrenty feature is not available for this product...!");
 		}
-		Thread.sleep(2000);
-		driver.findElement(By.xpath(xpath)).click();
+		
 		//	driver.findElement(By.xpath("(//span[@class='ng-option-label ng-star-inserted'])[4]")).click();
 
 	}
@@ -245,12 +290,15 @@ public class PDPScenarioTest extends BaseClassBay {
 	}
 
 	@Test
-	public void viewOfImageTest() {
+	public void viewOfImageTest() throws AWTException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-
 		hp.getLaptopsIcon().click();
 
 		driver.findElement(By.xpath(("(//a[contains(text(),'HP Laptop')])[1]"))).click();
+		
+		Robot rb=new Robot();
+		
+		rb.mouseWheel(5);
 
 
 	}
