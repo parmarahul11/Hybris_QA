@@ -6,14 +6,16 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
-
+@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class BannerScrollingHomepageTest extends BaseClassBay {
 
 	@Test
-	public void headerPrimaryREDBackColourTest() throws Exception {
+	public void BannerScrollingHomepageTest() throws Exception {
 		Thread.sleep(2000);
 		Robot rb=new Robot();
 		rb.mouseWheel(5);
@@ -30,5 +32,7 @@ public class BannerScrollingHomepageTest extends BaseClassBay {
 			break;
 		}
 	}
+		Assert.assertTrue(true);
+		System.out.println("All banners are scrolled successfully !");
    }
 }

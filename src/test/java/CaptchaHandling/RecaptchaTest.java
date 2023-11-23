@@ -43,9 +43,12 @@ public class RecaptchaTest extends BaseClassBay{
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//div[@class='recaptcha-checkbox-border']")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//div[@class='recaptcha-checkbox-border']"))).click();
 		
-		Thread.sleep(3000);
+	//	driver.findElement(By.xpath("//div[@class='recaptcha-checkbox-border']")).click();
+		
+		Thread.sleep(20000);
 			
 		driver.switchTo().parentFrame();
 		

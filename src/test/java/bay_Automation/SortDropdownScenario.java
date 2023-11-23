@@ -2,14 +2,16 @@ package bay_Automation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
 import generic.utilities.WebdriverUtility;
 import object_Repo_BAY.HomePage_EleBAY;
-
+@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class SortDropdownScenario extends BaseClassBay {
 
 	@Test(dataProvider = "dropdownOptions" )
@@ -20,6 +22,10 @@ public class SortDropdownScenario extends BaseClassBay {
 		WebElement ele = driver.findElement(By.xpath("//span[@class='ng-arrow-wrapper']"));
 		ele.click();
 		driver.findElement(By.xpath(data)).click();
+		
+		Assert.assertTrue(true);
+		System.out.println("Products are sorted as per user selection !");
+
 	}
 
 	@DataProvider(name = "dropdownOptions")

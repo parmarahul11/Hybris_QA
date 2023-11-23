@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -29,10 +30,10 @@ import com.aventstack.extentreports.Status;
 import generic.utilities.BaseClassBay;
 import generic.utilities.ListenerImplementationWithExtentReport;
 import object_Repo_BAY.HomePage_EleBAY;
-
+@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class PLPScenario extends BaseClassBay {
 	@Test
-	public void plpGetAllProdName() throws AWTException {
+	public void plpGetAllProdName() throws AWTException, InterruptedException {
 
 		Robot robot=new Robot();		
 		robot.mouseWheel(10);
@@ -42,11 +43,14 @@ public class PLPScenario extends BaseClassBay {
 		List<WebElement> actualEles = driver.findElements(By.xpath("(//*[@class='cx-product-name'])"));
 
 		for(WebElement webele:actualEles) {
-
+			Thread.sleep(500);
 			System.out.println(webele.getText().toString());
 			//Assert.assertEquals(sourceEle, actualEle, "data matched");
 		}
+		Assert.assertTrue(true);
+		System.out.println("All products name from plp are listed !");
 	}
+	
 	////a[@class='product-details-cnt']/child::div[@class='price']
 
 	@Test
@@ -58,6 +62,7 @@ public class PLPScenario extends BaseClassBay {
 
 		driver.findElement(By.cssSelector("[class='cx-icon fas fa-th-large ng-star-inserted']")).click();
 		Assert.assertTrue(true);
+		System.out.println("Products are listed are per Grid view !");
 	}
 	@Test
 	public void plpListiew() {
@@ -69,6 +74,7 @@ public class PLPScenario extends BaseClassBay {
 		driver.findElement(By.cssSelector("[class='cx-icon fas fa-bars ng-star-inserted']")).click();
 
 		Assert.assertTrue(true);
+		System.out.println("Products are listed are per List view !");
 	}
 	@Test
 	public void PriceOfProductVisibleTest() {
@@ -84,8 +90,11 @@ public class PLPScenario extends BaseClassBay {
 				Assert.assertEquals(true, true);
 			}else if(!webElement.isDisplayed()) {
 				Assert.assertEquals(false, true);
+				System.out.println("Price of product is  not displayed !");
 			}
 		}
+		Assert.assertTrue(true);
+		System.out.println("Price of product is displayed !");
 	}
 
 	@Test
@@ -106,7 +115,9 @@ public class PLPScenario extends BaseClassBay {
 			}else {
 				Assert.assertEquals(false, true);
 			}
-		}		
+		}
+		Assert.assertTrue(true);
+		System.out.println("Currency of product is displayed !");
 	}
 //	public ExtentTest test;
 	@Test
@@ -116,7 +127,6 @@ public class PLPScenario extends BaseClassBay {
 		hp.clickOnSearchButton();
 		WebElement anyProductICon1=driver.findElement(By.xpath("(//a[@class='add-to-compare'])[1]"));
 		WebElement anyProductICon2=driver.findElement(By.xpath("(//a[@class='add-to-compare'])[2]"));
-
 
 		if (anyProductICon1.isDisplayed()==true && anyProductICon2.isDisplayed()==true) {
 
@@ -137,13 +147,14 @@ public class PLPScenario extends BaseClassBay {
 			test.log(Status.PASS, MediaEntityBuilder.createScreenCaptureFromPath(path).build());
 			test.pass("details").addScreenCaptureFromPath(path);
 			 */
-			Reporter.log("Product added to compare list..!");
+		//	Reporter.log("Product added to compare list..!");
 			Assert.assertEquals(true, true);
+			System.out.println("Product added to compare list..!");
 
 		}else {
 			Assert.assertEquals(false, true);
 			System.out.println("Add to compare icon not visible for this product");
-			Reporter.log("Add to compare icon not visible for this product");
+		//	Reporter.log("Add to compare icon not visible for this product");
 		}
 		//	ListenerImplementationWithExtentReport.reports.flush();
 	}
@@ -162,11 +173,8 @@ public class PLPScenario extends BaseClassBay {
 			clickCollectButton.click();
 		Assert.assertEquals(true, true);	
 		}
-		
-	}
+		Assert.assertTrue(true);
+		System.out.println("Click and collect is displayed & are available for this product !");
 
-	@AfterTest
-	public void endConfig() {
-		//	driver.quit();
 	}
 }

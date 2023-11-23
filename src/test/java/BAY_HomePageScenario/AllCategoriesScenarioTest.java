@@ -59,9 +59,5 @@ public class AllCategoriesScenarioTest extends BaseClassBay{
 		Thread.sleep(1000);
 		System.out.println(driver.getTitle());
 	}
-	
-	@AfterTest
-	public void afterTestConfig() {
-		driver.quit();
-	}
+
 }

@@ -48,8 +48,8 @@ public class SearchProductTest extends BaseClassBay{
 		return data;
 	}
 	
-	@AfterTest
-	public void afterTest() {
-		//driver.close();
-	}
+//	@AfterTest
+//	public void afterTest() {
+//		//driver.close();
+//	}
 }

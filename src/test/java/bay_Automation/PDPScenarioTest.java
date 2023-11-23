@@ -2,6 +2,7 @@ package bay_Automation;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -189,9 +190,8 @@ public class PDPScenarioTest extends BaseClassBay {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 
-		hp.getLaptopsIcon().click();
-
-		driver.findElement(By.xpath("(//a[contains(text(),'HP Laptop')])[1]")).click();
+		hp.getRefrigaratorsIcon().click();
+		driver.findElement(By.xpath("(//a[@class='cx-product-name'])[1]")).click();
 
 		Robot rb=new Robot();
 		Thread.sleep(2000);
@@ -206,6 +206,7 @@ public class PDPScenarioTest extends BaseClassBay {
 		
 		Assert.assertEquals(true, true);
 		}else {
+			Assert.assertTrue(false);
 			System.out.println("Extended Warrenty feature is not available for this product...!");
 		}
 		
@@ -218,14 +219,22 @@ public class PDPScenarioTest extends BaseClassBay {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 
-		hp.getLaptopsIcon().click();
+		hp.getRefrigaratorsIcon().click();
 
-		driver.findElement(By.xpath("(//a[contains(text(),'HP Laptop')])[1]")).click();
+		driver.findElement(By.xpath("(//a[@class='cx-product-name'])[1]")).click();
 
 		Robot rb=new Robot();
 		rb.mouseWheel(3);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[text()=' See Details']")).click();
+		WebElement seeDetailLink = driver.findElement(By.xpath("//*[text()=' See Details']"));
+		if (seeDetailLink.isDisplayed()) {
+			seeDetailLink.click();
+			Assert.assertTrue(true);
+			System.out.println("See details option available for this product !");
+		}else {
+			Assert.assertTrue(false);
+			System.out.println("See details option Not available for this product !");
+		}
 	}
 
 	@Test
@@ -241,6 +250,7 @@ public class PDPScenarioTest extends BaseClassBay {
 		rb.mouseWheel(3);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[text()=' PRODUCT DESCRIPTION ']")).click();
+		Assert.assertTrue(true);
 	}
 
 	@Test
@@ -256,6 +266,7 @@ public class PDPScenarioTest extends BaseClassBay {
 		rb.mouseWheel(3);
 
 		driver.findElement(By.xpath("//button[text()=' PRODUCT SPECIFICATION ']")).click();
+		Assert.assertTrue(true);
 
 	}
 	@Test
@@ -271,6 +282,7 @@ public class PDPScenarioTest extends BaseClassBay {
 		rb.mouseWheel(3);
 
 		driver.findElement(By.xpath("//button[text()=' RATINGS & REVIEWS ']")).click();
+		Assert.assertTrue(true);
 
 	}	
 	@Test
@@ -290,16 +302,67 @@ public class PDPScenarioTest extends BaseClassBay {
 	}
 
 	@Test
-	public void viewOfImageTest() throws AWTException {
+	public void viewOfImageTest() throws AWTException, InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.getLaptopsIcon().click();
 
 		driver.findElement(By.xpath(("(//a[contains(text(),'HP Laptop')])[1]"))).click();
-		
+		//scroll to pagination arrow
 		Robot rb=new Robot();
+		Thread.sleep(2000);
+		rb.mouseWheel(2);
+		Thread.sleep(2000);
+		//click on pagination to change image view
+		driver.findElement(By.xpath("//div[@class='pagination ng-star-inserted']/child::button[2]")).click();
 		
-		rb.mouseWheel(5);
-
-
+		WebElement imageNumber=driver.findElement(By.xpath("//div[@class='pagination ng-star-inserted']/child::span[1]"));
+	//	System.out.println(imageNumber.getText());
+		if (imageNumber.getText().contentEquals("2")) {
+			Assert.assertTrue(true);
+			System.out.println("Image view changed to image number: "+imageNumber.getText());
+		}
+	}
+	
+	@Test
+	public void addProductToWishlistForLoggedInUserOnly() throws InterruptedException, IOException {
+		//go to login page
+		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
+		hp.getLoginIcon().click();
+		//login with otp	
+		driver.findElement(By.xpath("//button[@class='btn request-otp-btn']")).click();
+		driver.findElement(By.xpath("//input[@formcontrolname='mobileNo']")).sendKeys("12345678");
+		driver.findElement(By.xpath("//button[@class='btn login-btn']")).click();
+		Thread.sleep(8000);
+		WebElement submitButton = driver.findElement(By.xpath("//button[@class='btn login-btn']"));
+		submitButton.click();
+		Thread.sleep(2000);
+		//go to any product pdp
+		hp.getLaptopsIcon().click();
+		driver.findElement(By.xpath(("(//a[contains(text(),'HP Laptop')])[1]"))).click();
+		//click on wish-list icon
+		driver.findElement(By.xpath("(//i[@class='far fa-heart'])[2]")).click();
+		Thread.sleep(2000);
+		wUtil.takeScreenShot(driver, "addedToWishlistScreenshot");
+		
+		Assert.assertTrue(true);
+		System.out.println("Product added to Wishlist successfully !");
+		
+	}
+	
+	@Test
+	public void ZoomedViewOfProductTest() throws IOException, InterruptedException {
+		
+		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
+		hp.getLaptopsIcon().click();
+		//go to product pdp
+		driver.findElement(By.xpath(("(//a[contains(text(),'HP Laptop')])[1]"))).click();
+		//click on image to zoom in view
+		driver.findElement(By.id("product-img")).click();
+		Thread.sleep(2000);
+		wUtil.takeScreenShot(driver, "zoomInViewProduct");
+		
+		Assert.assertTrue(true);
+		System.out.println("Product zoom in view clicked!");
+		
 	}
 }

@@ -7,10 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import generic.utilities.BaseClass;
+import generic.utilities.BaseClassBay;
 import generic.utilities.WebdriverUtility;
 import object_Repo_BAY.HomePage_EleBAY;
 
-public class LoginPageScenarioTest extends BaseClass {
+public class LoginPageScenarioTest extends BaseClassBay {
 	@Test
 	public void loginToBAY() throws InterruptedException, AWTException {
 		wUtil.waitForDom(driver);

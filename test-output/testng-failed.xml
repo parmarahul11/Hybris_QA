@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="BAY_HomePageScenario.LoginWithOTPTest">
+      <class name="BAY_SanityPackage.HomepageToDisplayValidationTest">
         <methods>
           <include name="beforeConfig"/>
           <include name="afterConfig"/>
-          <include name="loginWithOTPTest"/>
+          <include name="navigateToHomepage"/>
         </methods>
-      </class> <!-- BAY_HomePageScenario.LoginWithOTPTest -->
+      </class> <!-- BAY_SanityPackage.HomepageToDisplayValidationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

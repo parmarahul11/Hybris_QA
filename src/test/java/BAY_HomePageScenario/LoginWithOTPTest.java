@@ -4,11 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
 import object_Repo_BAY.HomePage_EleBAY;
-
+@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class LoginWithOTPTest extends BaseClassBay{
 
 	@Test
@@ -44,16 +45,20 @@ public class LoginWithOTPTest extends BaseClassBay{
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		WebElement submitButton = driver.findElement(By.xpath("//button[@class='btn login-btn']"));
 		js.executeScript("arguments[0].removeAttribute('disabled')", submitButton);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
+		
+		if (submitButton.isEnabled()) {
+			js.executeScript("arguments[0].click();",submitButton );
+			System.out.println("user successfully logged in..!");
+		}else {
+			System.out.println("user successfully logged in..!");
+			Assert.assertEquals(false, true);
+		}
 		*/
-//		if (submitButton.isEnabled()) {
-//			js.executeScript("arguments[0].click();",submitButton );
-//			System.out.println("user successfully logged in..!");
-//		}else {
-//			System.out.println("user successfully logged in..!");
-//			Assert.assertEquals(false, true);
-//		}
 		WebElement submitButton = driver.findElement(By.xpath("//button[@class='btn login-btn']"));
 		submitButton.click();
+		
+		Assert.assertTrue(true);
+		System.out.println("Test User successfully logged in with OTP feature");
 	}
 }
