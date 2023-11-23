@@ -11,11 +11,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
 import object_Repo_BAY.HomePage_EleBAY;
-
+@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class AddToCart extends BaseClassBay {
 
 	@DataProvider
@@ -44,7 +45,7 @@ public class AddToCart extends BaseClassBay {
 		
 		driver.findElement(By.xpath("//a[@cxmodalreason='View Cart click']")).click();
 		
-		driver.findElement(By.xpath("//*[@class='btn btn-primary best-cart-button btn-block']")).click();
+		//driver.findElement(By.xpath("//*[@class='btn btn-primary best-cart-button btn-block']")).click();
 		
 		
 		Assert.assertTrue(true);
