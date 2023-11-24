@@ -9,10 +9,11 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import generic.utilities.BaseClass;
+import generic.utilities.BaseClassBay;
 import object_Repo_BAY.HomePage_EleBAY;
 
 @Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class HomepageHeaderScenariosTest extends BaseClass {
+public class HomepageHeaderScenariosTest extends BaseClassBay {
 
 	@Test(priority = 1)
 	public void ChangeToArebicTest() throws InterruptedException {

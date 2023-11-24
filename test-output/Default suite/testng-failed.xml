@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="BAY_SanityPackage.HomepageToDisplayValidationTest">
+      <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
         <methods>
           <include name="beforeConfig"/>
+          <include name="captureBAYLogo"/>
           <include name="afterConfig"/>
-          <include name="navigateToHomepage"/>
         </methods>
-      </class> <!-- BAY_SanityPackage.HomepageToDisplayValidationTest -->
+      </class> <!-- BAY_HomePageScenario.HomepageHeaderScenariosTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

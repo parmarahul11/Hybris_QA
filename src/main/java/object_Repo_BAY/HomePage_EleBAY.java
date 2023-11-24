@@ -21,7 +21,7 @@ public class HomePage_EleBAY{
 	 */
 
 	//declaration
-	@FindBy(xpath = "//img[@alt='Best Al Yousufi']")
+	@FindBy(xpath = "//img[@alt='Best Al Yousifi']")
 	private WebElement bAYLogoIcon;
 
 	@FindBy(xpath = "//a[@class='blue-bg-link mt-30 current-lang']")
