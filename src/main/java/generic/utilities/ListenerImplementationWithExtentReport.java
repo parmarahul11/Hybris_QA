@@ -10,6 +10,7 @@ import org.testng.SkipException;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -28,7 +29,7 @@ public class ListenerImplementationWithExtentReport implements ITestListener{
 	}
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		test.log(Status.PASS, result.getMethod().getMethodName()+" : passed/suceed");
+		test.log(Status.PASS, result.getMethod().getMethodName()+" : passed/succeed");
 		
 	}
 
@@ -75,7 +76,7 @@ public class ListenerImplementationWithExtentReport implements ITestListener{
 		//Since execution is started here, we have to configure extent Reports here.
 		
 		ExtentSparkReporter reporter=new ExtentSparkReporter(System.getProperty("user.dir")+
-				"./Reports/BAY_ExReport"+jutil.getSystemDateFormat()+".html");
+				"./Reports/BAY_ExReport_"+jutil.getSystemDateFormat()+".html");
 
 		reporter.config().setTheme(Theme.STANDARD);
 		reporter.config().setReportName("BAY Sanity Report");
@@ -90,13 +91,15 @@ public class ListenerImplementationWithExtentReport implements ITestListener{
 		
 		try {
 			reports.setSystemInfo("Browser",putil.readDataFromPropertyFile("browser"));
-			reports.setSystemInfo("Base URL", putil.readDataFromPropertyFile("BAY"));
+	//		reports.setSystemInfo("Base URL", putil.readDataFromPropertyFile("BAY"));
 		} catch (IOException e) {	
 			e.printStackTrace();
 		}
-		
-
 	}
+	
+	public void logTestStatus(Status status, String message, String screenshotPath) {
+        test.log(status, message, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+    }
 	@Override
 	public void onFinish(ITestContext context) {
 		

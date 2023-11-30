@@ -38,12 +38,12 @@ public class BaseClassBay {
 		
 		if(BROWSER.equalsIgnoreCase("chrome")) {
 		
-			WebDriverManager.chromedriver().setup();
+		//	WebDriverManager.chromedriver().setup();
 //			ChromeOptions opt=new ChromeOptions();
 //			opt.addArguments("--remote-allow-origins=*");
 //			opt.addArguments("--disable-notifications");
 //			opt.addArguments("--start-maximized");
-			WebDriver driver=new ChromeDriver(/*opt*/);
+			driver=new ChromeDriver(/*opt*/);
 		}
 		else if(BROWSER.equalsIgnoreCase("edge")) {
 			//System.getProperty("browser").equalsIgnoreCase("edge")
@@ -55,6 +55,7 @@ public class BaseClassBay {
 		else {
 		//	ChromeOptions options=new ChromeOptions();
 		//	options.addArguments("--remote-allow-origins=*");
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver(/*options*/);
 		} 
 			

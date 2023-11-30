@@ -175,7 +175,6 @@ public class CheckoutSummaryWithManualInt_TC_14 extends BaseClassBay{
 			System.out.println("User not get logged in, Please login to Proceed !");
 			Assert.assertTrue(false);
 		}
-
 	}
 	@Test
 	public void verifyOrderTotalTest() throws InterruptedException {
@@ -236,6 +235,5 @@ public class CheckoutSummaryWithManualInt_TC_14 extends BaseClassBay{
 			System.out.println("User not get logged in, Please login to Proceed !");
 			Assert.assertTrue(false);
 		}
-
 	}
 }

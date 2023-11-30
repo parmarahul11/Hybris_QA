@@ -26,6 +26,7 @@ public class HomepageToDisplayValidationTest extends BaseClassBay{
 		wait.until(ExpectedConditions.visibilityOf(home.getbAYLogoIcon()));
 		
 		Assert.assertTrue(home.getbAYLogoIcon().isDisplayed());
-		Reporter.log("Browser navigated to Homepage successfully");
+	//	Reporter.log("Browser navigated to Homepage successfully");
+		System.out.println("Browser navigated to Homepage successfully");
 	}
 }
