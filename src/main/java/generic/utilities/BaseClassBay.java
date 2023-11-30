@@ -91,7 +91,7 @@ public class BaseClassBay {
 		JavaUtility jUtil=new JavaUtility();
 		TakesScreenshot ts = (TakesScreenshot)sDriver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		String path = System.getProperty("user.dir")+"./BAYScreenShots/BAY"+jUtil.getRandomNumber()+".png";
+		String path = System.getProperty("user.dir")+"./BAYScreenShots/BAY"+jUtil.getSystemDateFormat()+".png";
 		File dest=new File(path);
 		FileUtils.copyFile(src, dest);
 

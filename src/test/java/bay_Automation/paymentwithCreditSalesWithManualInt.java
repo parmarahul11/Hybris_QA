@@ -37,6 +37,7 @@ public class paymentwithCreditSalesWithManualInt {
 	PropertyFileUtility pUtil=new PropertyFileUtility();
 	JavaUtility jUtil=new JavaUtility();
 	
+	public static WebDriver sDriver;
 	@BeforeTest
 	public void beforeConfig() throws IOException {
 		String BROWSER = pUtil.readDataFromPropertyFile("browser");
@@ -54,13 +55,13 @@ public class paymentwithCreditSalesWithManualInt {
 			driver=new EdgeDriver();
 		}
 		else {
-			WebDriverManager.chromedriver().setup();
+		//	WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver(/*options*/);
 		} 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
-		
 		driver.get(pUtil.readDataFromPropertyFile("bayStg"));	
+		sDriver=driver;
 	}
 //data for product name	
 	@DataProvider(name="product")
@@ -74,7 +75,7 @@ public class paymentwithCreditSalesWithManualInt {
 	}
 	@Test(dataProvider ="product" )
 	public void paymentWithCreditSalesTest(String data) throws InterruptedException, AWTException, IOException {
-		ListenerImplementationWithExtentReport exReport=new ListenerImplementationWithExtentReport();
+	//	ListenerImplementationWithExtentReport exReport=new ListenerImplementationWithExtentReport();
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		//login as user
 		hp.getLoginIcon().click();
@@ -141,12 +142,18 @@ public class paymentwithCreditSalesWithManualInt {
 			Thread.sleep(2000);
 			OrderConfirmationPage ocf=new OrderConfirmationPage(driver);
 			System.out.println("Order ID is: "+ocf.getOrderId().getText());
-			
+			/*
 			//take order confirmation page screenshot:
-			String OrderConfPagePath = wUtil.takeScreenShot(driver, "OrderConfirmationPage_"+jUtil.getSystemDateFormat());
+		//String OrderConfPagePath = wUtil.takeScreenShot(driver, "OrderConfirmationPage_"+jUtil.getSystemDateFormat());
+			String OrderConfPagePath=BaseClassBay.takeScreenShots("paymentWithCreditSalesTest");
+			
 			System.out.println("Captured Screenshot path is: "+OrderConfPagePath);
 			
+			//BaseClassBay.takeScreenShots(OrderConfPagePath);
+			
 			exReport.logTestStatus(Status.PASS, "CaptureOrderConfirmationPage", OrderConfPagePath);
+			*/
+			
 			Assert.assertEquals(true, true);
 				
 			} else {
