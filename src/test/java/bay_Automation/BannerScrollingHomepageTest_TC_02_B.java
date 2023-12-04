@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
 @Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class BannerScrollingHomepageTest extends BaseClassBay {
+public class BannerScrollingHomepageTest_TC_02_B extends BaseClassBay {
 
 	@Test
 	public void BannerScrollingHomepageTest() throws Exception {

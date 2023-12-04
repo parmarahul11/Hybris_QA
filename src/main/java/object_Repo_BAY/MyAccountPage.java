@@ -11,15 +11,15 @@ public class MyAccountPage {
 	WebDriver driver;
 	//declaration
 	@FindBy(xpath = "(//div[@class='myacc-cnt'])[2]")
-	private WebElement MyAccountTextArea;
+	private WebElement MyAccountLink;
 	
 
 
 	/**
 	 * @return the myAccountTextArea
 	 */
-	public WebElement getMyAccountTextArea() {
-		return MyAccountTextArea;
+	public WebElement getMyAccountLink() {
+		return MyAccountLink;
 	}
 
 
@@ -136,8 +136,6 @@ public class MyAccountPage {
 	
 	//Initialization
 		public MyAccountPage(WebDriver driver) {
-			PageFactory.initElements(driver, this);
-	
-
-}
+			PageFactory.initElements(driver, this);	
+		}
 }

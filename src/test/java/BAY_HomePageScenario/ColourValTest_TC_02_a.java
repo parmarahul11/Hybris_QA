@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import generic.utilities.BaseClass;
 import generic.utilities.BaseClassBay;
 @Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class ColourValTest extends BaseClassBay {
+public class ColourValTest_TC_02_a extends BaseClassBay {
 
 	@Test
 	public void headerPrimaryREDBackColourTest() {

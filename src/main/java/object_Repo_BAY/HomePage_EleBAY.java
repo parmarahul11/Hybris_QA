@@ -1,5 +1,7 @@
 package object_Repo_BAY;
 
+import javax.xml.xpath.XPath;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,6 +38,12 @@ public class HomePage_EleBAY{
 	@FindBy(xpath = "//*[@class='search-icon']")
 	private WebElement searchButton;
 	
+	@FindBy(xpath="(//a[@class='cx-best-mini-cart'])[1]/div[1]/div[2]/div[2]/span[@class='count']")
+	private WebElement minicartQuantity;
+	
+	public WebElement getMinicartQuantity() {
+		return minicartQuantity;
+	}
 	public WebElement getSearchButton() {
 		return searchButton;
 	}

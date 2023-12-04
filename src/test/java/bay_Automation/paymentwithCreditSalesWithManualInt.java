@@ -26,10 +26,14 @@ import generic.utilities.ListenerImplementationWithExtentReport;
 import generic.utilities.PropertyFileUtility;
 import generic.utilities.WebdriverUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import object_Repo_BAY.AddToCartPage;
+import object_Repo_BAY.DeliveryInformationPage;
 import object_Repo_BAY.HomePage_EleBAY;
+import object_Repo_BAY.MyAccountPage;
 import object_Repo_BAY.OrderConfirmationPage;
 import object_Repo_BAY.PaymentPage;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+import object_Repo_BAY.ShippingAddressPage;
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class paymentwithCreditSalesWithManualInt {
 	
 	WebDriver driver=null;
@@ -44,7 +48,7 @@ public class paymentwithCreditSalesWithManualInt {
 		
 		if(BROWSER.equalsIgnoreCase("chrome")) {
 			
-			//WebDriverManager.chromedriver().setup();
+		//	WebDriverManager.chromedriver().setup();
 			 driver=new ChromeDriver(/*opt*/);
 			 
 		}else if(BROWSER.equalsIgnoreCase("edge")) {
@@ -62,6 +66,7 @@ public class paymentwithCreditSalesWithManualInt {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
 		driver.get(pUtil.readDataFromPropertyFile("bayStg"));	
 		sDriver=driver;
+		wUtil.waitForDom(driver);
 	}
 //data for product name	
 	@DataProvider(name="product")
@@ -144,16 +149,16 @@ public class paymentwithCreditSalesWithManualInt {
 			System.out.println("Order ID is: "+ocf.getOrderId().getText());
 			/*
 			//take order confirmation page screenshot:
-		//String OrderConfPagePath = wUtil.takeScreenShot(driver, "OrderConfirmationPage_"+jUtil.getSystemDateFormat());
-			String OrderConfPagePath=BaseClassBay.takeScreenShots("paymentWithCreditSalesTest");
+			String OrderConfPagePath = wUtil.takeScreenShot(driver, "OrderConfirmationPage_"+jUtil.getSystemDateFormat());
+	//		String OrderConfPagePath=BaseClassBay.takeScreenShots("paymentWithCreditSalesTest");
 			
 			System.out.println("Captured Screenshot path is: "+OrderConfPagePath);
 			
-			//BaseClassBay.takeScreenShots(OrderConfPagePath);
+			BaseClassBay.takeScreenShots(OrderConfPagePath);
 			
 			exReport.logTestStatus(Status.PASS, "CaptureOrderConfirmationPage", OrderConfPagePath);
-			*/
 			
+			*/
 			Assert.assertEquals(true, true);
 				
 			} else {
@@ -165,6 +170,107 @@ public class paymentwithCreditSalesWithManualInt {
 			System.out.println("User not get logged in, Please login to Proceed !");
 			Assert.assertTrue(false);
 		}
-		
 	}
+	@DataProvider(name = "orderIdData")
+	public String[] orderIdData() {
+
+		String[] iDdata=new String[] {
+				//any product path
+				 "0006225954" 
+		};
+		return iDdata;
+	}
+	@Test(dataProvider = "orderIdData")
+	public void reOrderPaymentWithCreditSalesTest(String iDdata) throws InterruptedException, AWTException {
+		Robot robot=new Robot();
+		ListenerImplementationWithExtentReport exReport=new ListenerImplementationWithExtentReport();
+		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
+		//login as user
+		//driver.navigate().refresh();
+		wUtil.waitForDom(driver);
+		hp.getLoginIcon().click();
+
+		driver.findElement(By.xpath("//button[@class='btn request-otp-btn']")).click();
+		driver.findElement(By.xpath("//input[@formcontrolname='mobileNo']")).sendKeys("12345678");
+		driver.findElement(By.xpath("//button[@class='btn login-btn']")).click();
+		//wait for manual intervention
+		Thread.sleep(8000);
+		WebElement VerifyButton = driver.findElement(By.xpath("//button[@class='btn login-btn']"));
+		MyAccountPage map=new MyAccountPage(driver);
+		if (VerifyButton.isEnabled()) {
+			Thread.sleep(2000);
+			VerifyButton.click();
+			Thread.sleep(2000);
+			Assert.assertEquals(map.getMyAccountLink().isDisplayed(), true);
+			System.out.println("user logged in successfully !");
+			//go to my account page
+			map.getMyAccountLink().click();
+			//go to order history
+			map.getOrderHistory().click();
+			//select order
+		/*	String data="0006225954"; */
+			
+			driver.findElement(By.xpath("//a[text()=' "+iDdata+"']/parent::td/following::td[4]/child::button")).click();
+			//go to cart and proceed
+			AddToCartPage cart=new AddToCartPage(driver);
+			Thread.sleep(1000);
+			cart.getProceedToCheckoutButton().click();
+			//go to address and proceed
+			ShippingAddressPage sheep=new ShippingAddressPage(driver);
+			sheep.getContinueButton().click();
+			//go to delivery and proceed
+			DeliveryInformationPage delivery=new DeliveryInformationPage(driver);
+			robot.mouseWheel(4);
+			Thread.sleep(1000);
+			delivery.getContinueButton().click();
+			Thread.sleep(1000);
+			//go to payment and continuous order with credit sales
+			PaymentPage pp=new PaymentPage(driver);
+			pp.getCreditSalesRadio().click();
+			Thread.sleep(1000);
+			//select country:
+			Select Sel = new Select(pp.getNationalityDropdown());
+			Sel.selectByValue("KUWAITI");
+			Thread.sleep(1000);
+			//enter income
+			pp.getMonthlyIncomeTextArea().sendKeys("10000");
+			//enter civil number
+			pp.getCivilIdNumberTextArea().sendKeys("123456789123");
+			Thread.sleep(1000);
+			//select income type
+			Select Sel1 = new Select(pp.getIncomeTypeDropdown());
+			Sel1.selectByValue("SALARIED");
+			Thread.sleep(1000);
+			Robot rb=new Robot();
+			rb.mouseWheel(5);
+			Thread.sleep(2000);
+			//select tenure
+			Select Sel2 = new Select(pp.getTenureDropdown());
+			Sel2.selectByIndex(1);
+			Thread.sleep(1000);
+			//select preferred area
+			Select Sel3 = new Select(pp.getPreferredAreaDropdown());
+			Sel3.selectByValue("SHUWAIKH");
+			Thread.sleep(1000);
+			//continue payment
+			if (pp.getContinuePaymentButton().isEnabled()) {
+				Assert.assertEquals(true, true);
+				pp.getContinuePaymentButton().click();
+			Assert.assertEquals(true, true);
+			System.out.println("Order Placed Successfully with Credit sales !");
+			Thread.sleep(2000);
+			rb.mouseWheel(5);
+			Thread.sleep(2000);
+			OrderConfirmationPage ocf=new OrderConfirmationPage(driver);
+			System.out.println("Order ID is: "+ocf.getOrderId().getText());
+			Assert.assertEquals(true, true);
+			}else {
+				System.out.println("Required data for payment is Credit Sales is insufficient, Plase verify data !");
+				Assert.assertEquals(false, true);
+			}
+		}else {
+			System.out.println("User not get logged in, Please login to Proceed !");
+			Assert.assertTrue(false);
+		}		
+	}	
 }
