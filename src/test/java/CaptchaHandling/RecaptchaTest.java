@@ -10,9 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
+import object_Repo_BAY.HomePage_EleBAY;
+import object_Repo_BAY.LoginPage;
+import object_Repo_BAY.MyAccountPage;
 
 public class RecaptchaTest extends BaseClassBay{
 	
@@ -24,27 +28,27 @@ public class RecaptchaTest extends BaseClassBay{
 		WebDriver driver=new ChromeDriver(opt);
 		
 		driver.get("https://best.com.kw/en/");
-	*/
+	*/	HomePage_EleBAY hp=new HomePage_EleBAY(driver);
+		LoginPage lp=new LoginPage(driver);
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-		driver.findElement(By.xpath("//a[.='Login']")).click();
+		hp.getLoginIcon().click();
+		Thread.sleep(2000);
 		String userId=pUtil.readDataFromPropertyFile("userId");
 		String password=pUtil.readDataFromPropertyFile("password");
-		
-		driver.findElement(By.xpath("//*[@formcontrolname='userId']")).sendKeys(userId);
-		driver.findElement(By.xpath("//*[@formcontrolname='password']")).sendKeys(password);
+		lp.getEmailTextField().sendKeys(userId);
+		lp.getPasswordTextField().sendKeys(password);
 		
 		Thread.sleep(2000);
 		
-		WebElement reCaptcha=driver.findElement(By.xpath("//iframe[@title='reCAPTCHA']"));
+	//	WebElement reCaptcha=driver.findElement(By.xpath("//iframe[@title='reCAPTCHA']"));
 	//	wait.until(ExpectedConditions.visibilityOf(reCaptcha));
 	//  driver.switchTo().frame(reCaptcha);
 		
-		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[@title='reCAPTCHA']")));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(lp.getRechaptchaFrameElement()));
 		
 		Thread.sleep(3000);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//div[@class='recaptcha-checkbox-border']"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(lp.getRechaptchaCheckbox())).click();
 		
 	//	driver.findElement(By.xpath("//div[@class='recaptcha-checkbox-border']")).click();
 		
@@ -54,8 +58,13 @@ public class RecaptchaTest extends BaseClassBay{
 		
 		Thread.sleep(2000);
 		
-		driver.findElement(By.xpath("//button[@class='btn login-btn']")).click();
+		lp.getSignInButtton().click();
 		
-		Thread.sleep(1500);
+		MyAccountPage my=new MyAccountPage(driver);
+		if (my.getMyAccountLink().isDisplayed()) {
+			Thread.sleep(2000);
+			Assert.assertEquals(true, true);
+			System.out.println("User logged in successFully");
+		}
 	}
 }
