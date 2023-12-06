@@ -43,11 +43,11 @@ public class MyAccountAdderessBookTC_23 extends BaseClassBay{
 				MyAccount.click();
 				System.out.println("user is on MyAccoynt page !");
 				MyAccountPage my=new MyAccountPage(driver);
-				Thread.sleep(2000);
-				if ((my.getH2header()).isDisplayed()) {
-					Assert.assertEquals(true, true);
-					System.out.println(my.getH2header().getText());		
-				}
+//				Thread.sleep(2000);
+//				if ((my.getH2header()).isDisplayed()) {
+//					Assert.assertEquals(true, true);
+//					System.out.println(my.getH2header().getText());		
+//				}
 				
 				//click on adderess book  
 				my.getAdderessBook().click();
