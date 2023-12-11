@@ -19,10 +19,10 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		Thread.sleep(2000);
 		// click On panasonic store Icon
 		AllCategories_Elements ac = new AllCategories_Elements(driver);
-		wUtil.clickUsingJSE(driver, ac.getGamingStoreIcon());
+		wUtil.clickUsingJSE(driver, ac.getPanasonicStoreStoreIcon());
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -49,7 +49,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getOfficeAutomationStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -65,7 +65,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getBuiltInKitchenAppliancesStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -81,7 +81,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getHomeEntertainmentStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -97,7 +97,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getMobilesStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -113,7 +113,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getGamingStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -129,7 +129,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getComputersAndTabletsStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -145,7 +145,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getAirConditionersStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -161,7 +161,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getHomeAppliancesStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -177,7 +177,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getOfficeAutomationStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -193,7 +193,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getPersonalCareStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -209,7 +209,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getPerfumeWatchesStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -225,7 +225,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getToysBagsStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 
@@ -241,7 +241,7 @@ public class AllCategoriesScenarioTest extends BaseClassBay {
 		ac.getYearEndSaleStoreIcon().click();
 		// verify title of page
 		Thread.sleep(4000);
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle()+" is displayed");
 		Assert.assertEquals(true, true);
 	}
 

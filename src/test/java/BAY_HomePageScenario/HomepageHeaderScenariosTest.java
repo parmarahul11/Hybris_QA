@@ -18,10 +18,10 @@ import generic.utilities.BaseClassBay;
 import generic.utilities.ListenerImplementationWithExtentReport;
 import object_Repo_BAY.HomePage_EleBAY;
 
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class HomepageHeaderScenariosTest extends BaseClassBay {
 	
-	@Test(priority = 0)
+	@Test
 	public void navigateToHomepage_TC_01() {
 		
 	//	Access URL using any standard browser ie: Chrome or edge	
@@ -32,12 +32,12 @@ public class HomepageHeaderScenariosTest extends BaseClassBay {
 		
 		wait.until(ExpectedConditions.visibilityOf(home.getbAYLogoIcon()));
 		
-		Assert.assertTrue(home.getbAYLogoIcon().isDisplayed());
+		Assert.assertEquals(home.getbAYLogoIcon().isDisplayed(),true);
 	//	Reporter.log("Browser navigated to Homepage successfully");
 		System.out.println("Browser navigated to Homepage successfully");
 	}
 	
-	@Test(priority = 1)
+	@Test
 	public void ChangeToArebicTest_TC_02_E() throws InterruptedException {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
@@ -52,7 +52,7 @@ public class HomepageHeaderScenariosTest extends BaseClassBay {
 
 	}
 
-	@Test(priority = 2,dataProvider = "searchData")
+	@Test(dataProvider = "searchData")
 	public void clickOnSearchBarAndSearchSomething(String data) throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar(data);
@@ -68,7 +68,7 @@ public class HomepageHeaderScenariosTest extends BaseClassBay {
 	}
 	
 	
-	@Test(priority = 3)
+	@Test
 	public void goToLoginPageAndbackToHomepage_TC_02_D() throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.getLoginIcon().click();
@@ -81,7 +81,7 @@ public class HomepageHeaderScenariosTest extends BaseClassBay {
 		System.out.println("User successfully went to login and again back to homepage");
 	}
 	
-	@Test(priority = 4)
+	@Test
 	public void captureBAYLogo_TC_02_C() throws IOException {
 		ListenerImplementationWithExtentReport exReport=new ListenerImplementationWithExtentReport();
 				

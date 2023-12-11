@@ -32,7 +32,7 @@ public class BannerScrollingHomepageTest_TC_02_B extends BaseClassBay {
 			break;
 		}
 	}
-		Assert.assertTrue(true);
+		Assert.assertEquals(true, true);
 		System.out.println("All banners are scrolled successfully !");
    }
 }
