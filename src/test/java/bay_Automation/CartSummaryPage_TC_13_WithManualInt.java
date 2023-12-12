@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
 import object_Repo_BAY.HomePage_EleBAY;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class CartSummaryPage_TC_13_WithManualInt extends BaseClassBay{
 
 	/**@throws InterruptedException 

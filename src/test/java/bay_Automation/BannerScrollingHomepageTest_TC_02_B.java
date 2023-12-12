@@ -11,7 +11,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class BannerScrollingHomepageTest_TC_02_B extends BaseClassBay {
 
 	@Test

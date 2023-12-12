@@ -118,7 +118,7 @@ public class AddToCartAsLoginUser extends BaseClassBay {
 			
 		}else {
 			System.out.println("User not get logged in, Please login to Proceed !");
-			Assert.assertTrue(false);
+			Assert.assertEquals(false, true);
 		}
 
 	}

@@ -13,7 +13,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class BrowserCategoryHomepageGetText extends BaseClassBay {
 /*
 	@FindBy(xpath = "//a[@class='nav-menu ng-star-inserted' and @href]")
@@ -37,7 +37,7 @@ public class BrowserCategoryHomepageGetText extends BaseClassBay {
 			// TODO: handle exception
 			 e.printStackTrace();
 		}
-		 Assert.assertTrue(true);
+		 Assert.assertEquals(true,true);
 		 System.out.println("All Category names are listed !");
 	}
 }

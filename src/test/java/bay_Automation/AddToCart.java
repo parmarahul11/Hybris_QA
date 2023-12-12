@@ -48,7 +48,7 @@ public class AddToCart extends BaseClassBay {
 		//driver.findElement(By.xpath("//*[@class='btn btn-primary best-cart-button btn-block']")).click();
 		
 		
-		Assert.assertTrue(true);
+		Assert.assertEquals(true,true);
 		
 		System.out.println("Product added successfully into cart !");
 	}

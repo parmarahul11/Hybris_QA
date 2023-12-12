@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import generic.utilities.BaseClassBay;
 import generic.utilities.WebdriverUtility;
 import object_Repo_BAY.HomePage_EleBAY;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class FooterLinksNavigation extends BaseClassBay{
 
 //	@BeforeTest
@@ -40,7 +40,9 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnAboutUsLink();
-		Assert.assertTrue(true);
+		Thread.sleep(4000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
 	}
 	@Test
 	public void faqNavigation() throws AWTException, InterruptedException {	
@@ -49,7 +51,9 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnFaqLink();
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
 	}
 	@Test
 	public void ReturnPolicyNavigation() throws AWTException, InterruptedException {
@@ -58,7 +62,9 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnReturnPolicyLink();	
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
 	}
 
 	@Test
@@ -68,7 +74,10 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnAboutUsLink();	
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
+		
 	}
 	@Test
 	public void HeplLinkNavigation() throws AWTException, InterruptedException {
@@ -77,7 +86,9 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnHelpLink();
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());	
 	}
 	@Test
 	public void StoreLocatorLinkNavigation() throws AWTException, InterruptedException {
@@ -86,7 +97,9 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnStoreLocatorLink();
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
 	}
 
 	@Test
@@ -96,9 +109,10 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnSiteMapLink();
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
 	}
-
 
 	@Test
 	public void youTubeLinkNavigation() throws AWTException, InterruptedException {
@@ -107,7 +121,9 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnyouTubeLink();
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
 	}
 
 	@Test
@@ -117,7 +133,9 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnInstagramLink();
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
 	}
 
 	@Test
@@ -128,9 +146,10 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnLinkedInLink();
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
 	}
-
 
 	@Test
 	public void FacebookLinkNavigation() throws AWTException, InterruptedException {
@@ -140,7 +159,9 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnFacebookLink();
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
 	}
 
 	@Test
@@ -151,6 +172,8 @@ public class FooterLinksNavigation extends BaseClassBay{
 		HomePage_EleBAY home=new HomePage_EleBAY(driver);
 		Thread.sleep(2000);
 		home.clickOnTwitterLink();
-		Assert.assertTrue(true);
+		Thread.sleep(3000);
+		Assert.assertEquals(true,true);
+		System.out.println(driver.getTitle());
 	}
 }

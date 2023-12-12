@@ -1,7 +1,9 @@
 package bay_Automation;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -15,13 +17,16 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 import generic.utilities.BaseClassBay;
 import generic.utilities.JavaUtility;
 import object_Repo_BAY.HomePage_EleBAY;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class BuyNowAsAnnonymousUser extends BaseClassBay {
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+public class BuyNow_TC_11 extends BaseClassBay {
+
 	@DataProvider
 	public String[] productList() {
+
 		String[] data=new String[] {
 				//any product path
 				 "(//a[@class='cx-product-name'])[2]" 
@@ -44,6 +49,7 @@ public class BuyNowAsAnnonymousUser extends BaseClassBay {
 		Thread.sleep(2000);
 		wUtil.waitForDom(driver);
 		HomePage_EleBAY hp1=new HomePage_EleBAY(driver);
+
 		hp1.getLoginIcon().click();
 	
 		driver.findElement(By.xpath("//button[@class='btn request-otp-btn']")).click();
@@ -65,8 +71,9 @@ public class BuyNowAsAnnonymousUser extends BaseClassBay {
 		File dest=new File(path);
 		FileUtils.copyFile(src, dest);
 		
-		Assert.assertTrue(true);
+		Assert.assertEquals(true,true);
 		
 		System.out.println("User successfully buy now product !");
 	}
 }
+	

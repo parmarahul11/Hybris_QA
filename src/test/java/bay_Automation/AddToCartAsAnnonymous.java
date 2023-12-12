@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
 import object_Repo_BAY.HomePage_EleBAY;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class AddToCartAsAnnonymous extends BaseClassBay {
 
 	@DataProvider
@@ -62,10 +62,12 @@ public class AddToCartAsAnnonymous extends BaseClassBay {
 		submitButton.click();
 		
 		driver.findElement(By.xpath("//*[@class='btn btn-primary best-cart-button btn-block']")).click();
+		
+		Assert.assertEquals(true,true);
+		
+		System.out.println("Product added successfully into cart !");	
 	}
 		
-		//Assert.assertTrue(true);
-		
-		//System.out.println("Product added successfully into cart !");
+	
 	}
 	

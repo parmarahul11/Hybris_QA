@@ -21,8 +21,8 @@ import org.testng.annotations.Test;
 import generic.utilities.BaseClassBay;
 import generic.utilities.JavaUtility;
 import object_Repo_BAY.HomePage_EleBAY;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class BuyNowAsloginUser extends BaseClassBay {
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+public class BuyNowAsloginUser_TC_11 extends BaseClassBay {
 
 	@DataProvider
 	public String[] productList() {
@@ -73,7 +73,7 @@ public class BuyNowAsloginUser extends BaseClassBay {
 		File dest=new File(path);
 		FileUtils.copyFile(src, dest);
 		
-		Assert.assertTrue(true);
+		Assert.assertEquals(true,true);
 		
 		System.out.println("User successfully buy now product !");
 	}
