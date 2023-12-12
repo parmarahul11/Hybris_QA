@@ -71,7 +71,7 @@ public class BaseClassBay {
 
 		try {
 			Thread.sleep(3000);
-		//	driver.quit();
+			driver.quit();
 		} catch (Exception e) {
 		//	e.printStackTrace();
 		}

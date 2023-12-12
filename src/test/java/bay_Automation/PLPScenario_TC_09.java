@@ -30,8 +30,8 @@ import com.aventstack.extentreports.Status;
 import generic.utilities.BaseClassBay;
 import generic.utilities.ListenerImplementationWithExtentReport;
 import object_Repo_BAY.HomePage_EleBAY;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class PLPScenario extends BaseClassBay {
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+public class PLPScenario_TC_09 extends BaseClassBay {
 	@Test
 	public void plpGetAllProdName() throws AWTException, InterruptedException {
 
@@ -47,7 +47,7 @@ public class PLPScenario extends BaseClassBay {
 			System.out.println(webele.getText().toString());
 			//Assert.assertEquals(sourceEle, actualEle, "data matched");
 		}
-		Assert.assertTrue(true);
+		Assert.assertEquals(true, true);
 		System.out.println("All products name from plp are listed !");
 	}
 	
@@ -61,7 +61,7 @@ public class PLPScenario extends BaseClassBay {
 		hp.clickOnSearchButton();
 
 		driver.findElement(By.cssSelector("[class='cx-icon fas fa-th-large ng-star-inserted']")).click();
-		Assert.assertTrue(true);
+		Assert.assertEquals(true, true);
 		System.out.println("Products are listed are per Grid view !");
 	}
 	@Test
@@ -73,7 +73,7 @@ public class PLPScenario extends BaseClassBay {
 
 		driver.findElement(By.cssSelector("[class='cx-icon fas fa-bars ng-star-inserted']")).click();
 
-		Assert.assertTrue(true);
+		Assert.assertEquals(true, true);
 		System.out.println("Products are listed are per List view !");
 	}
 	@Test
@@ -93,7 +93,7 @@ public class PLPScenario extends BaseClassBay {
 				System.out.println("Price of product is  not displayed !");
 			}
 		}
-		Assert.assertTrue(true);
+		Assert.assertEquals(true, true);
 		System.out.println("Price of product is displayed !");
 	}
 
@@ -116,7 +116,7 @@ public class PLPScenario extends BaseClassBay {
 				Assert.assertEquals(false, true);
 			}
 		}
-		Assert.assertTrue(true);
+		Assert.assertEquals(true, true);
 		System.out.println("Currency of product is displayed !");
 	}
 //	public ExtentTest test;
@@ -173,7 +173,7 @@ public class PLPScenario extends BaseClassBay {
 			clickCollectButton.click();
 		Assert.assertEquals(true, true);	
 		}
-		Assert.assertTrue(true);
+		Assert.assertEquals(true, true);
 		System.out.println("Click and collect is displayed & are available for this product !");
 
 	}

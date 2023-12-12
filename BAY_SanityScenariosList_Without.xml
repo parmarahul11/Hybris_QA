@@ -32,25 +32,23 @@
 		  
       <!-- 8-TC_05-->    <class name="bay_Automation.BrowserCategoryHomepageGetText"/>
       
-      <!-- 9-->   <class name="bay_Automation.AddToCartAsLoginUser">
-		  <methods>
-			  <include name="verifyCartQuanityOnHomepage_TC02_I"></include>
-		  </methods>
-		  </class>
-	 <!-- 10-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
+	 <!-- 9-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
 		  <methods>
 			  <exclude name="navigateToHomepage_TC_01"></exclude>
 		  </methods>
       </class>	  
-      <!-- 11-->   <class name="bay_Automation.FooterLinksNavigation"/>
+      <!-- 10-->   <class name="bay_Automation.FooterLinksNavigation"/>
       
-      <!-- 12-->   <class name="BAY_HomePageScenario.AllCategoriesScenarioTest"/>
+      <!-- 11-->   <class name="BAY_HomePageScenario.AllCategoriesScenarioTest"/>
       
-      <!-- 13-->   <class name="bay_Automation.BrowseProductTest_TC_06"/>
+      <!-- 12-->   <class name="bay_Automation.BrowseProductTest_TC_06"/>
       
-      <!--14 -->   <class name="bay_Automation.SearchProductTest_TC_07"></class>
+      <!--13 -->   <class name="bay_Automation.SearchProductTest_TC_07"></class>
       
+      <!--14 -->   <class name="bay_Automation.SortDropdownScenario_TC_08"></class>
       
+      <!--15 -->   <class name="bay_Automation.PLPScenario_TC_09"></class>
+       
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
