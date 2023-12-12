@@ -48,6 +48,8 @@
       <!--14 -->   <class name="bay_Automation.SortDropdownScenario_TC_08"></class>
       
       <!--15 -->   <class name="bay_Automation.PLPScenario_TC_09"></class>
+      
+      <!--16 -->   <class name="bay_Automation.PDPScenarioTest_TC_10"></class>
        
     </classes>
   </test> <!-- Test -->

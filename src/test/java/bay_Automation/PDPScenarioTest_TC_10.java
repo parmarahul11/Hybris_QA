@@ -21,7 +21,7 @@ import generic.utilities.DataproviderBAY;
 import object_Repo_BAY.HomePage_EleBAY;
 
 //@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class PDPScenarioTest extends BaseClassBay {
+public class PDPScenarioTest_TC_10 extends BaseClassBay {
 
 	@DataProvider
 	public String[] productList() {
@@ -235,8 +235,9 @@ public class PDPScenarioTest extends BaseClassBay {
 			Assert.assertEquals(true, true);
 			System.out.println("See details option available for this product !");
 		}else {
-			Assert.assertEquals(false, true);
 			System.out.println("See details option Not available for this product !");
+			Assert.assertEquals(false, true);
+			
 		}
 	}
 
