@@ -6,6 +6,8 @@
 	</listeners>
   <test thread-count="5" preserve-order="true" name="WithManualInt">
     <classes>
+	<!--TC 10 4 -->	<class name="bay_Automation.AddToWishlist_PDP_TC10"></class>
+		
     <!-- TC_11_a) -->  <class name="bay_Automation.BuyNow_TC_11">
     </class>
     <!-- TC_11_b) -->  <class name="bay_Automation.BuyNowAsAnnonymousUser_TC_11">

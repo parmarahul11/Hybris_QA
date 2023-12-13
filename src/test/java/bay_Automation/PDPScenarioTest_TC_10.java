@@ -80,7 +80,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 		WebElement clickCollect = driver.findElement(By.xpath("//button[@class='btn collect-from-store-btn btn-block ng-star-inserted']"));
 
 		//	 Assert.assertFalse(clickCollect.isEnabled());
-
+		Thread.sleep(2000);
 		if (clickCollect.isEnabled()) {
 			Assert.assertEquals(true, true);
 			System.out.println("click and collect available for this product(button enabled)");
@@ -329,33 +329,6 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 			Assert.assertEquals(true, true);
 			System.out.println("Image view changed to image number: "+imageNumber.getText());
 		}
-	}
-	
-	@Test
-	public void addProductToWishlistForLoggedInUserOnly() throws InterruptedException, IOException {
-		//go to login page
-		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
-		hp.getLoginIcon().click();
-		//login with otp	
-		driver.findElement(By.xpath("//button[@class='btn request-otp-btn']")).click();
-		driver.findElement(By.xpath("//input[@formcontrolname='mobileNo']")).sendKeys("12345678");
-		driver.findElement(By.xpath("//button[@class='btn login-btn']")).click();
-		Thread.sleep(8000);
-		WebElement submitButton = driver.findElement(By.xpath("//button[@class='btn login-btn']"));
-		submitButton.click();
-		Thread.sleep(2000);
-		//go to any product pdp
-		hp.getLaptopsIcon().click();
-		driver.findElement(By.xpath(("(//a[contains(text(),'HP Laptop')])[1]"))).click();
-		//click on wish-list icon
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//i[@class='far fa-heart'])[2]")).click();
-		Thread.sleep(2000);
-		wUtil.takeScreenShot(driver, "addedToWishlistScreenshot"+jUtil.getSystemDateFormat());
-		
-		Assert.assertEquals(true, true);
-		System.out.println("Product added to Wishlist successfully !");
-		
 	}
 	
 	@Test

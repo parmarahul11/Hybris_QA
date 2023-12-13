@@ -152,28 +152,28 @@ public class HomePage_EleBAY{
 	 * footer elements
 	 */
 	
-	@FindBy(xpath = "//*[text()='Help']")
+	@FindBy(xpath = "//a[@title='Help']")
 	private WebElement helpLink;
 	
-	@FindBy(xpath = "//*[text()='Contact Us']")
+	@FindBy(xpath = "//a[@title='Contact Us']")
 	private WebElement contactUsLink;
 
-	@FindBy(xpath = "//*[text()='Return Policy']")
+	@FindBy(xpath = "//a[@title='Return Policy']")
 	private WebElement returnPolicyLink;
 	
-	@FindBy(xpath = "//*[text()='Terms & Conditions']")
+	@FindBy(xpath = "//a[@title='Terms & Conditions']")
 	private WebElement termsConditionsLink;
 	
-	@FindBy(xpath = "//*[text()='FAQs']")
+	@FindBy(xpath = "//a[@title='FAQs']")
 	private WebElement faqLink;
 	
-	@FindBy(xpath = "//*[text()='About Us']")
+	@FindBy(xpath = "//a[@title='About Us']")
 	private WebElement aboutUsLink;
 	
-	@FindBy(xpath = "//*[text()='Store Locator']")
+	@FindBy(xpath = "//a[@title='Store Locator']")
 	private WebElement storeLocatorLink;
 	
-	@FindBy(xpath = "//*[text()='Site Map']")
+	@FindBy(xpath = "//a[@title='Site Map']")
 	private WebElement siteMapLink;
 	
 	@FindBy(id = "Youtube")
