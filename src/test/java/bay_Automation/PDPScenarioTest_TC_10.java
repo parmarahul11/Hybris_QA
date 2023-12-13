@@ -209,8 +209,8 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 		Assert.assertEquals(true, true);
 		}else {
 			
-			System.out.println("Extended Warrenty feature is not available for this product...!");
-			Assert.assertEquals(true, true);
+			System.out.println(xpath+"Extended Warrenty feature is not available for this ...!");
+			Assert.assertEquals(false,true);
 		}
 		
 		//	driver.findElement(By.xpath("(//span[@class='ng-option-label ng-star-inserted'])[4]")).click();

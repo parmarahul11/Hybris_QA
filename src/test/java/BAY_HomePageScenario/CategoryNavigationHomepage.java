@@ -9,9 +9,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import generic.utilities.BaseClass;
+import generic.utilities.BaseClassBay;
 import object_Repo_BAY.HomePage_EleBAY;
 //@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class CategoryNavigationHomepage extends BaseClass{
+public class CategoryNavigationHomepage extends BaseClassBay{
 
 	@Test(priority = 1/*invocationCount = 5*/)
 	public void navigateToAllCatagories() throws InterruptedException {
