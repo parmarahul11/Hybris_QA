@@ -4,6 +4,7 @@
 	<listeners>
 	<listener class-name="generic.utilities.ListenerImplementationWithExtentReport"></listener>
 	</listeners>
+	
   <test thread-count="5" parallel="tests" preserve-order="true" name="Test">
     <classes>
 		
