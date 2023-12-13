@@ -17,7 +17,7 @@ import generic.utilities.BaseClassBay;
 import generic.utilities.WebdriverUtility;
 import object_Repo_BAY.HomePage_EleBAY;
 //@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class FooterLinksNavigation extends BaseClassBay{
+public class FooterLinksNavigation_TC_04 extends BaseClassBay{
 
 //	@BeforeTest
 //	public void linkNavigation() throws AWTException, InterruptedException {	

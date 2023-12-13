@@ -34,7 +34,7 @@ import object_Repo_BAY.OrderConfirmationPage;
 import object_Repo_BAY.PaymentPage;
 import object_Repo_BAY.ShippingAddressPage;
 //@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class paymentwithCreditSalesWithManualInt {
+public class paymentwithCreditSalesWithManualInt_TC_14 {
 	
 	WebDriver driver=null;
 	WebdriverUtility wUtil=new WebdriverUtility();

@@ -8,7 +8,7 @@ import object_Repo_BAY.AllCategories_Elements;
 import object_Repo_BAY.HomePage_EleBAY;
 
 //@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class AllCategoriesScenarioTest extends BaseClassBay {
+public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 
 	@Test(priority = 1)
 	public void clickOnPanasonicStoreIconTest() throws InterruptedException {

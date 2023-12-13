@@ -6,50 +6,33 @@
 	</listeners>
   <test thread-count="5" parallel="tests" preserve-order="true" name="Test">
     <classes>
-   <!-- 1-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
+		
+   <!-- TC_01-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
 		  	 <methods>
 			  <include name="navigateToHomepage_TC_01"></include>
 		 	 </methods>
       </class>
-    <!-- 2-->    <class name="BAY_HomePageScenario.ColourValTest_TC_02_a"/>
-    <!-- 3-->    <class name="bay_Automation.BannerScrollingHomepageTest_TC_02_B"/>
-	<!-- 4-->    <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
-		 	 <methods>
-			  <include name="captureBAYLogo_TC_02_C"></include>
-			 </methods>
-      </class>	  
-      <!-- 5-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
-		  <methods>
-			  <include name="goToLoginPageAndbackToHomepage_TC_02_D"></include>
-		  </methods>
-      </class>
-      <!-- 6-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
-		  <methods>
-			  <include name="ChangeToArebicTest_TC_02_E"></include>
-		  </methods>
-      </class>
-       <!-- 7-->   <class name="BAY_HomePageScenario.CategoryNavigationHomepage"/>
+    <!-- TC-02 a)-->    <class name="BAY_HomePageScenario.ColourValTest_TC_02_a"/>
+    <!-- TC_02 b)-->    <class name="bay_Automation.BannerScrollingHomepageTest_TC_02_B"/>
+	<!-- TC 02 c) d) e) TC 04-->    <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest"/>
+    
+       <!-- TC 02 f) h)-->   <class name="BAY_HomePageScenario.CategoryNavigationHomepage"/>
 		  
-      <!-- 8-TC_05-->    <class name="bay_Automation.BrowserCategoryHomepageGetText"/>
+      <!--TC_05-->    <class name="bay_Automation.BrowserCategoryHomepageGetText"/>
+      	  
+       <!-- TC_04-->   <class name="bay_Automation.FooterLinksNavigation_TC_04"/>
+       
+      <!-- TC_05-->   <class name="BAY_HomePageScenario.AllCategoriesScenarioTest_TC_05"/>
       
-	 <!-- 9-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
-		  <methods>
-			  <exclude name="navigateToHomepage_TC_01"></exclude>
-		  </methods>
-      </class>	  
-      <!-- 10-->   <class name="bay_Automation.FooterLinksNavigation"/>
+      <!-- TC 06-->   <class name="bay_Automation.BrowseProductTest_TC_06"/>
       
-      <!-- 11-->   <class name="BAY_HomePageScenario.AllCategoriesScenarioTest"/>
+      <!--TC 07 -->   <class name="bay_Automation.SearchProductTest_TC_07"></class>
       
-      <!-- 12-->   <class name="bay_Automation.BrowseProductTest_TC_06"/>
+      <!--TC 08 -->   <class name="bay_Automation.SortDropdownScenario_TC_08"></class>
       
-      <!--13 -->   <class name="bay_Automation.SearchProductTest_TC_07"></class>
+      <!--TC 09 -->   <class name="bay_Automation.PLPScenario_TC_09"></class>
       
-      <!--14 -->   <class name="bay_Automation.SortDropdownScenario_TC_08"></class>
-      
-      <!--15 -->   <class name="bay_Automation.PLPScenario_TC_09"></class>
-      
-      <!--16 -->   <class name="bay_Automation.PDPScenarioTest_TC_10"></class>
+      <!--TC 10 -->   <class name="bay_Automation.PDPScenarioTest_TC_10"></class>
        
     </classes>
   </test> <!-- Test -->

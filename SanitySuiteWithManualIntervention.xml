@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="WithManualInt">
+<suite name="Suite" preserve-order="true">
+	<listeners>
+	<listener class-name="generic.utilities.ListenerImplementationWithExtentReport"></listener>
+	</listeners>
+  <test thread-count="5" preserve-order="true" name="WithManualInt">
     <classes>
     <!-- TC_11_a) -->  <class name="bay_Automation.BuyNow_TC_11">
     </class>
     <!-- TC_11_b) -->  <class name="bay_Automation.BuyNowAsAnnonymousUser_TC_11">
     </class>
-    <!-- TC_11_c) -->  <class name="bay_Automation.BuyNowAsloginUser_TC_11">
+    <!-- TC_11_c) TC 02 i) -->  <class name="bay_Automation.BuyNowAsloginUser_TC_11">
     </class>
     <!-- TC 12 -->     <class name="bay_Automation.AddToCart_TC_12">
     </class> 
@@ -16,7 +19,9 @@
     </class>
     <!-- TC 13 -->     <class name="bay_Automation.CartSummaryPage_TC_13_WithManualInt">
     </class> 
-    <!-- TC 14 & TC 31 -->     <class name="bay_Automation.CheckoutSummaryWithManualInt_TC_14">
+    <!-- TC 14 -->     <class name="bay_Automation.CheckoutSummaryWithManualInt_TC_14">
+    </class> 
+    <!-- TC 14 & TC 31 -->     <class name="bay_Automation.paymentwithCreditSalesWithManualInt_TC_14">
     </class> 
     <!-- TC 14-Additional-->   <class name="bay_Automation.ModesOfPaymentCheck_TC14_Additional">
     </class> 

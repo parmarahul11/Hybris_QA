@@ -140,6 +140,43 @@ TIFF, JPEG, GIF, PNG, and BMP image formats Multi-page TIFF images PDF document 
 		</plugins>
 	</build>			
   </profile>	
+  
+  <profile>
+	<id>SanitySuiteWITHOUTManualIntervervention</id>		
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+       			 <artifactId>maven-surefire-plugin</artifactId>
+     			   <version>3.1.2</version>
+   			     <configuration>
+      			    <suiteXmlFiles>
+    		        <suiteXmlFile>BAY_SanityScenariosList_Without.xml</suiteXmlFile>
+     		        </suiteXmlFiles>
+      		     </configuration>
+			</plugin>
+		</plugins>
+	</build>			
+  </profile>
+  
+  <profile>
+	<id>SanitySuiteWITHManualIntervervention</id>		
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+       			 <artifactId>maven-surefire-plugin</artifactId>
+     			   <version>3.1.2</version>
+   			     <configuration>
+      			    <suiteXmlFiles>
+    		        <suiteXmlFile>SanitySuiteWithManualIntervention.xml</suiteXmlFile>
+     		        </suiteXmlFiles>
+      		     </configuration>
+			</plugin>
+		</plugins>
+	</build>			
+  </profile>		
+  
 </profiles>
  
  <build>

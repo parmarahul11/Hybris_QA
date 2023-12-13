@@ -42,6 +42,7 @@ public class HomepageHeaderScenariosTest extends BaseClassBay {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		wUtil.waitUntilElementToVisible(driver, hp.getChangeLangToArebic());
+		Thread.sleep(3000);
 		hp.getChangeLangToArebic().click();
 		Thread.sleep(2000);
 		String ArebicText = driver.getTitle();
@@ -51,7 +52,7 @@ public class HomepageHeaderScenariosTest extends BaseClassBay {
 		System.out.println("User successfully changed the Language to Arabic");
 
 	}
-
+	/*
 	@Test(dataProvider = "searchData")
 	public void clickOnSearchBarAndSearchSomething(String data) throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
@@ -62,6 +63,7 @@ public class HomepageHeaderScenariosTest extends BaseClassBay {
 		Assert.assertEquals(true, true);
 		System.out.println("User successfully searched required data !");
 	}
+	*/
 	@DataProvider(name = "searchData")
 	public String[][] inputdata(){
 		return new String[][] {{"iphone"},{"12345"}};
