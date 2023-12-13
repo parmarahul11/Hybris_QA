@@ -13,13 +13,14 @@ import object_Repo_BAY.HomePage_EleBAY;
 //@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class CategoryNavigationHomepage extends BaseClass{
 
-	@Test(priority = 0/*invocationCount = 5*/)
+	@Test(priority = 1/*invocationCount = 5*/)
 	public void navigateToAllCatagories() throws InterruptedException {
 
 		// move mouse pointer to all categories icon
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.mouseOverOnAllCategories();
 	}
+	/*
 	@Test(priority = 2)
 	public void clickOnDigitalCardsIcon() throws InterruptedException, AWTException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
@@ -45,12 +46,13 @@ public class CategoryNavigationHomepage extends BaseClass{
 		//wUtil.dragAndDrop(driver, source, dest);
 	//	hp.clickOnDigitalCards();
 	}
-	@Test(priority = 3)
+	*/
+	@Test(priority = 2)
 	public void clickOnAirConditioners() {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		wUtil.clickUsingJSE(driver, hp.getAirConditionerIcon());
 	}
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void NavigateToMyCart() {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.clickOnMyCartIcon();
