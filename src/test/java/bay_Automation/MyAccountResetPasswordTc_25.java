@@ -12,9 +12,8 @@ import generic.utilities.BaseClassBay;
 import object_Repo_BAY.HomePage_EleBAY;
 import object_Repo_BAY.MyAccountPage;
 import object_Repo_BAY.ResetPassword;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class MyAccountResetPasswordTc_25 extends BaseClassBay{
-
 
 	@Test
 	public void MyAccountUpdateProfileTest() throws InterruptedException, IOException {
@@ -81,4 +80,6 @@ public class MyAccountResetPasswordTc_25 extends BaseClassBay{
 				System.out.println("Password is not updated plz try again !");
 				Assert.assertEquals(false, true);
 			}
-		}}}
+		}
+	}
+}

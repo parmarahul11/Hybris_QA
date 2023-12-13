@@ -16,8 +16,8 @@ import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
 import object_Repo_BAY.HomePage_EleBAY;
-@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class AddToCart extends BaseClassBay {
+//@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
+public class AddToCart_TC_12 extends BaseClassBay {
 
 	@DataProvider
 	public String[] productList() {

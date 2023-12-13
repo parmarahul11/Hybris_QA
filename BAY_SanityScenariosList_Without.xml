@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Suite">
+<suite parallel="tests" preserve-order="true" name="Suite">
 	<listeners>
-		<listener class-name="generic.utilities.ListenerImplementationWithExtentReport"></listener>
+	<listener class-name="generic.utilities.ListenerImplementationWithExtentReport"></listener>
 	</listeners>
   <test thread-count="5" parallel="tests" preserve-order="true" name="Test">
     <classes>
    <!-- 1-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
-		  <methods>
+		  	 <methods>
 			  <include name="navigateToHomepage_TC_01"></include>
-		  </methods>
+		 	 </methods>
       </class>
     <!-- 2-->    <class name="BAY_HomePageScenario.ColourValTest_TC_02_a"/>
     <!-- 3-->    <class name="bay_Automation.BannerScrollingHomepageTest_TC_02_B"/>
-	<!-- 4-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
-		  <methods>
+	<!-- 4-->    <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
+		 	 <methods>
 			  <include name="captureBAYLogo_TC_02_C"></include>
-		  </methods>
+			 </methods>
       </class>	  
       <!-- 5-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
 		  <methods>
