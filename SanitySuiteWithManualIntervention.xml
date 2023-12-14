@@ -25,6 +25,8 @@
     </class> 
     <!-- TC 14 & TC 31 -->     <class name="bay_Automation.paymentwithCreditSalesWithManualInt_TC_14">
     </class> 
+    <!-- TC 14 -->     <class name="bay_Automation.ReOrderPaymentWithCreditSales_TC_14">
+    </class> 
     <!-- TC 14-Additional-->   <class name="bay_Automation.ModesOfPaymentCheck_TC14_Additional">
     </class> 
       <!-- TC 16 -->   <class name="bay_Automation.PaymentWithVoucherAppliedTest_TC_16">
