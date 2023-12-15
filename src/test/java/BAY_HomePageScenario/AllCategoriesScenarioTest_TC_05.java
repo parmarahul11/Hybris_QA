@@ -11,7 +11,7 @@ import object_Repo_BAY.HomePage_EleBAY;
 public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 
 	@Test(priority = 1)
-	public void clickOnPanasonicStoreIconTest() throws InterruptedException {
+	public void clickOnPanasonicStoreIconTest_TC_05_1() throws InterruptedException {
 
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
@@ -38,7 +38,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	 * }
 	 */
 	@Test(priority = 2)
-	public void clickOnOfficeAutomationIconTest() throws InterruptedException {
+	public void clickOnOfficeAutomationIconTest_TC_05_2() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -54,7 +54,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 3)
-	public void cliclOnBuiltInKitchenAppliancesStoreIconTest() throws InterruptedException {
+	public void cliclOnBuiltInKitchenAppliancesStoreIconTest_TC_05_3() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -70,7 +70,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 4)
-	public void cliclOnHomeEntaetainmentTest() throws InterruptedException {
+	public void cliclOnHomeEntaetainmentTest_TC_05_4() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -86,7 +86,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 5)
-	public void cliclOnMobileTest() throws InterruptedException {
+	public void cliclOnMobileTest_TC_05_5() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -102,7 +102,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 6)
-	public void cliclOnGamingTest() throws InterruptedException {
+	public void cliclOnGamingTest_TC_05_6() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -118,7 +118,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 7)
-	public void cliclOnComputerAndTabletsTest() throws InterruptedException {
+	public void cliclOnComputerAndTabletsTest_TC_05_7() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -134,7 +134,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 8)
-	public void cliclOnAirConditionTest() throws InterruptedException {
+	public void cliclOnAirConditionTest_TC_05_8() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -150,7 +150,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 9)
-	public void cliclOnHomeAppliencesTest() throws InterruptedException {
+	public void cliclOnHomeAppliencesTest_TC_05_9() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -166,7 +166,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 10)
-	public void cliclOnOfficeAutomationTest() throws InterruptedException {
+	public void cliclOnOfficeAutomationTest_TC_05_10() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -182,7 +182,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 11)
-	public void cliclOnPersonalCareTest() throws InterruptedException {
+	public void cliclOnPersonalCareTest_TC_05_11() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -198,7 +198,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 12)
-	public void cliclOnPerfumeAndWatchesTest() throws InterruptedException {
+	public void cliclOnPerfumeAndWatchesTest_TC_05_12() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -214,7 +214,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 13)
-	public void cliclOnToysAndBagsTest() throws InterruptedException {
+	public void cliclOnToysAndBagsTest_TC_05_13() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();
@@ -230,7 +230,7 @@ public class AllCategoriesScenarioTest_TC_05 extends BaseClassBay {
 	}
 
 	@Test(priority = 14)
-	public void cliclOnYearEndSalesTest() throws InterruptedException {
+	public void cliclOnYearEndSalesTest_TC_05_14() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		// click on all categories
 		hp.getAllCatagoiesIcon().click();

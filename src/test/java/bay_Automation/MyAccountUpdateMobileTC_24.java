@@ -15,7 +15,7 @@ import object_Repo_BAY.UpdateMobileAndEmailPage;
 public class MyAccountUpdateMobileTC_24 extends BaseClassBay {
 
 	@Test(priority = 1)
-	public void MyAccountMobileNumberUpdateTest() throws InterruptedException {
+	public void MyAccountMobileNumberUpdateTestTC_24() throws InterruptedException {
 
 		HomePage_EleBAY ma = new HomePage_EleBAY(driver);
 		// login as user

@@ -15,7 +15,7 @@ import object_Repo_BAY.HomePage_EleBAY;
 public class CheckoutSummaryWithManualInt_TC_14 extends BaseClassBay{
 
 	@Test
-	public void TC_14Test_1_verify_orderContent() throws InterruptedException {
+	public void verify_orderContent_TC_14_1() throws InterruptedException {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		//login as user
@@ -81,7 +81,7 @@ public class CheckoutSummaryWithManualInt_TC_14 extends BaseClassBay{
 		return data;
 	}
 	@Test(dataProvider = "addressName")
-	public void changeShippingAdressTest(String addressName) throws InterruptedException {
+	public void changeShippingAdressTest_TC_14_2(String addressName) throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		//login as user
 		hp.getLoginIcon().click();
@@ -129,7 +129,7 @@ public class CheckoutSummaryWithManualInt_TC_14 extends BaseClassBay{
 	}
 
 	@Test
-	public void verifyPaymentScreenTest() throws InterruptedException {
+	public void verifyPaymentScreenTest_TC_14_3() throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		//login as user
 		hp.getLoginIcon().click();

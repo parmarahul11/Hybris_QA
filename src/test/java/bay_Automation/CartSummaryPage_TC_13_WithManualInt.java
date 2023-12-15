@@ -23,7 +23,7 @@ public class CartSummaryPage_TC_13_WithManualInt extends BaseClassBay{
 	 */
 
 	@Test
-	public void cartSummaryPageTest() throws InterruptedException {
+	public void cartSummaryPageTest_TC_13() throws InterruptedException {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		//login as user

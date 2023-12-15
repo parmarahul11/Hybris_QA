@@ -2,39 +2,58 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" preserve-order="true" name="Suite">
 	<listeners>
-	<listener class-name="generic.utilities.ListenerImplementationWithExtentReport"></listener>
+		<listener
+			class-name="generic.utilities.ListenerImplementationWithExtentReport"></listener>
 	</listeners>
-	
-  <test thread-count="5" parallel="tests" preserve-order="true" name="Test">
-    <classes>
-		
-   <!-- TC_01-->   <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest">
-		  	 <methods>
-			  <include name="navigateToHomepage_TC_01"></include>
-		 	 </methods>
-      </class>
-    <!-- TC-02 a)-->    <class name="BAY_HomePageScenario.ColourValTest_TC_02_a"/>
-    <!-- TC_02 b)-->    <class name="bay_Automation.BannerScrollingHomepageTest_TC_02_B"/>
-	<!-- TC 02 c) d) e) TC 04-->    <class name="BAY_HomePageScenario.HomepageHeaderScenariosTest"/>
-    
-       <!-- TC 02 f) h)-->   <class name="BAY_HomePageScenario.CategoryNavigationHomepage"/>
-		  
-      <!--TC_05-->    <class name="bay_Automation.BrowserCategoryHomepageGetText"/>
-      	  
-       <!-- TC_04-->   <class name="bay_Automation.FooterLinksNavigation_TC_04"/>
-       
-      <!-- TC_05-->   <class name="BAY_HomePageScenario.AllCategoriesScenarioTest_TC_05"/>
-      
-      <!-- TC 06-->   <class name="bay_Automation.BrowseProductTest_TC_06"/>
-      
-      <!--TC 07 -->   <class name="bay_Automation.SearchProductTest_TC_07"></class>
-      
-      <!--TC 08 -->   <class name="bay_Automation.SortDropdownScenario_TC_08"></class>
-      
-      <!--TC 09 -->   <class name="bay_Automation.PLPScenario_TC_09"></class>
-      
-      <!--TC 10 -->   <class name="bay_Automation.PDPScenarioTest_TC_10"></class>
-       
-    </classes>
-  </test> <!-- Test -->
+
+	<test thread-count="5" parallel="tests" preserve-order="true"
+		name="Test">
+		<classes>
+
+			<!-- TC_01 -->
+			<class name="BAY_HomePageScenario.HomepageHeaderScenariosTest_TC_02_C_D_E">
+				<methods>
+					<include name="navigateToHomepage_TC_01"></include>
+				</methods>
+			</class>
+			<!-- TC-02 a) -->
+			<class name="BAY_HomePageScenario.ColourValTest_TC_02_a" />
+			<!-- TC_02 b) -->
+			<class
+				name="bay_Automation.BannerScrollingHomepageTest_TC_02_B" />
+			<!-- TC 02 c) d) e) TC 04 -->
+			<class
+				name="BAY_HomePageScenario.HomepageHeaderScenariosTest_TC_02_C_D_E" />
+
+			<!-- TC 02 f) h) -->
+			<class
+				name="BAY_HomePageScenario.CategoryNavigationHomepageTC_2_F_H" />
+
+			<!--TC_05 -->
+			<class name="bay_Automation.BrowserCategoryHomepageGetText" />
+
+			<!-- TC_04 -->
+			<class name="bay_Automation.FooterLinksNavigation_TC_04" />
+
+			<!-- TC_05 -->
+			<class
+				name="BAY_HomePageScenario.AllCategoriesScenarioTest_TC_05" />
+
+			<!-- TC 06 -->
+			<class name="bay_Automation.BrowseProductTest_TC_06" />
+
+			<!--TC 07 -->
+			<class name="bay_Automation.SearchProductTest_TC_07"></class>
+
+			<!--TC 08 -->
+			<class name="bay_Automation.SortDropdownScenario_TC_08"></class>
+
+			<!--TC 09 -->
+			<class name="bay_Automation.PLPScenario_TC_09"></class>
+
+			<!--TC 10 -->
+			<class name="bay_Automation.PDPScenarioTest_TC_10"></class>
+
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

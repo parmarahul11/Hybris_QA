@@ -16,7 +16,7 @@ import object_Repo_BAY.ResetPassword;
 public class MyAccountResetPasswordTc_25 extends BaseClassBay{
 
 	@Test
-	public void MyAccountUpdateProfileTest() throws InterruptedException, IOException {
+	public void MyAccountUpdateProfileTestTC_25() throws InterruptedException, IOException {
 
 		HomePage_EleBAY HP=new HomePage_EleBAY(driver);
 		//login as user
