@@ -73,7 +73,7 @@ public class ReOrderPaymentWithCreditSales_TC_14 {
 		return iDdata;
 	}
 	@Test(dataProvider = "orderIdData")
-	public void reOrderPaymentWithCreditSalesTest(String iDdata) throws InterruptedException, AWTException {
+	public void reOrderPaymentWithCreditSalesTest_TC_14(String iDdata) throws InterruptedException, AWTException {
 		Robot robot=new Robot();
 		ListenerImplementationWithExtentReport exReport=new ListenerImplementationWithExtentReport();
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);

@@ -23,7 +23,7 @@
 			<class name="bay_Automation.AddToCart_TC_12">
 			</class>
 			<!-- TC 12 a) -->
-			<class name="bay_Automation.addToCartAsAnnonymousUserTC12_a"></class>
+			<class name="bay_Automation.AddToCartAsAnnonymousTC12_a"></class>
 			<!-- TC 12_b) -->
 			<class name="bay_Automation.AddToCartAsLoginUserTC12_b">
 			</class>
@@ -34,14 +34,7 @@
 			<!-- TC 14 -->
 			<class name="bay_Automation.CheckoutSummaryWithManualInt_TC_14">
 			</class>
-			<!-- TC 14 & TC 31 -->
-			<class
-				name="bay_Automation.paymentwithCreditSalesWithManualInt_TC_14">
-			</class>
-			<!-- TC 14 -->
-			<class
-				name="bay_Automation.ReOrderPaymentWithCreditSales_TC_14">
-			</class>
+
 			<!-- TC 14-Additional -->
 			<class
 				name="bay_Automation.ModesOfPaymentCheck_TC14_Additional">
@@ -56,11 +49,22 @@
 			<!-- TC 23 -->
 			<class name="bay_Automation.MyAccountAdderessBookTC_23">
 			</class>
+			<!-- TC 23-1 -->
+			<class name="bay_Automation.MyAccountUpdateProfileTC_23_1">
+			</class>
 			<!-- TC 24 -->
 			<class name="bay_Automation.MyAccountUpdateMobileTC_24">
 			</class>
 			<!-- TC 25 -->
 			<class name="bay_Automation.MyAccountResetPasswordTc_25">
+			</class>
+			<!-- TC 14 & TC 31 -->
+			<class
+				name="bay_Automation.PaymentwithCreditSalesWithManualInt_TC_14_5">
+			</class>
+			<!-- TC 14 -->
+			<class
+				name="bay_Automation.ReOrderPaymentWithCreditSales_TC_14">
 			</class>
 
 

@@ -34,7 +34,7 @@ public class BuyNow_TC_11 extends BaseClassBay {
 		return data;
 	}
 	@Test(dataProvider ="productList" )
-	public void BuyNowSc(String data) throws InterruptedException, IOException {
+	public void BuyNowSc_TC_11(String data) throws InterruptedException, IOException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("Apple IPhone 15Pro");
 		hp.clickOnSearchButton();

@@ -13,7 +13,7 @@ import object_Repo_BAY.HomePage_EleBAY;
 public class AddToWishlist_PDP_TC10_d extends BaseClassBay{
 
 	@Test
-	public void addProductToWishlistForLoggedInUserOnlyTC10_d() throws InterruptedException, IOException {
+	public void addProductToWishlistForLoggedInUserOnlyTC_10_d() throws InterruptedException, IOException {
 		//go to login page
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.getLoginIcon().click();

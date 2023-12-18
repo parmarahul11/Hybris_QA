@@ -20,7 +20,7 @@ import object_Repo_BAY.ShippingAddressPage;
 public class ModesOfPaymentCheck_TC14_Additional extends BaseClassBay {
 
 	@Test
-	public void allPayementModesTest() throws IOException, InterruptedException {
+	public void allPayementModesTest_TC14() throws IOException, InterruptedException {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		LoginPage lp=new LoginPage(driver);

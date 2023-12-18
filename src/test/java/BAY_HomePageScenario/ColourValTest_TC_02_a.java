@@ -12,7 +12,7 @@ import generic.utilities.BaseClassBay;
 public class ColourValTest_TC_02_a extends BaseClassBay {
 
 	@Test
-	public void headerPrimaryREDBackColourTest() {
+	public void headerPrimaryREDBackColourTest_TC_02_a() {
 		String textCol = driver.findElement(By.xpath("//*[@id='header']")).getCssValue("background-color");
 		System.out.println(textCol);//rgba(227, 6, 19, 1)
 		String actualHexa="#e30613";
@@ -23,7 +23,7 @@ public class ColourValTest_TC_02_a extends BaseClassBay {
 	}
 	
 	@Test
-	public void headerSecondaryYELLOWColTest() {
+	public void headerSecondaryYELLOWColTest_TC_02_a() {
 		String textBagCol = driver.findElement(By.xpath("(//*[@id='navbarDropdown'])[1]")).getCssValue("background-color");
 		System.out.println(textBagCol);//
 		String colorhex = Color.fromString(textBagCol).asHex();
@@ -34,7 +34,7 @@ public class ColourValTest_TC_02_a extends BaseClassBay {
 	}
 	
 	@Test
-	public void headerSecondaryWhiteBackColTest() {
+	public void headerSecondaryWhiteBackColTest_TC_02_a() {
 		String textBagCol = driver.findElement(By.xpath("(//*[@class='nav-menu ng-star-inserted'])[15]")).getCssValue("color");
 		System.out.println(textBagCol);//rgba(255, 255, 255, 1)
 		String colorhex = Color.fromString(textBagCol).asHex();

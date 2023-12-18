@@ -177,7 +177,7 @@ public class CheckoutSummaryWithManualInt_TC_14 extends BaseClassBay{
 		}
 	}
 	@Test
-	public void verifyOrderTotalTest() throws InterruptedException {
+	public void verifyOrderTotalTest_TC_14_4() throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		//login as user
 		hp.getLoginIcon().click();

@@ -11,7 +11,8 @@
 		<classes>
 
 			<!-- TC_01 -->
-			<class name="BAY_HomePageScenario.HomepageHeaderScenariosTest_TC_02_C_D_E">
+			<class
+				name="BAY_HomePageScenario.HomepageHeaderScenariosTest_TC_02_C_D_E">
 				<methods>
 					<include name="navigateToHomepage_TC_01"></include>
 				</methods>
@@ -30,7 +31,8 @@
 				name="BAY_HomePageScenario.CategoryNavigationHomepageTC_2_F_H" />
 
 			<!--TC_05 -->
-			<class name="bay_Automation.BrowserCategoryHomepageGetText" />
+			<class
+				name="bay_Automation.BrowserCategoryHomepageGetText_TC_5" />
 
 			<!-- TC_04 -->
 			<class name="bay_Automation.FooterLinksNavigation_TC_04" />

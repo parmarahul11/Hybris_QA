@@ -15,7 +15,7 @@ import object_Repo_BAY.MyAccountPage;
 public class MyAccountAdderessBookTC_23 extends BaseClassBay{
 
 	@Test
-	public void MyAccountAdderessBookTC_23Test() throws InterruptedException {
+	public void MyAccountAdderessBookTC_23Test_2() throws InterruptedException {
 
 		HomePage_EleBAY ma=new HomePage_EleBAY(driver);
 		//login as user

@@ -27,7 +27,7 @@ public class BrowseProductTest_TC_06 extends BaseClassBay {
 		return data;
 	}
 	@Test(dataProvider = "products")
-	public void browseProductTest(String product) throws InterruptedException, AWTException, IOException {
+	public void browseProductTest_TC_06(String product) throws InterruptedException, AWTException, IOException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.getLaptopsIcon().click();
 		wUtil.waitForDom(driver);

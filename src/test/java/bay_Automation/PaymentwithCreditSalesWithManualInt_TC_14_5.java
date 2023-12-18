@@ -79,7 +79,7 @@ public class PaymentwithCreditSalesWithManualInt_TC_14_5 {
 		return data;
 	}
 	@Test(dataProvider ="product" )
-	public void paymentWithCreditSalesTest(String data) throws InterruptedException, AWTException, IOException {
+	public void paymentWithCreditSalesTest_TC_14_5(String data) throws InterruptedException, AWTException, IOException {
 	//	ListenerImplementationWithExtentReport exReport=new ListenerImplementationWithExtentReport();
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		//login as user

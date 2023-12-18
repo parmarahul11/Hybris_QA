@@ -29,7 +29,7 @@ public class AddToCart_TC_12 extends BaseClassBay {
 		return data;
 	}
 	@Test(dataProvider ="productList" )
-	public void addToCart(String data) throws InterruptedException, IOException {
+	public void addToCart_TC_12(String data) throws InterruptedException, IOException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("Apple IPhone 15Pro");
 		hp.clickOnSearchButton();

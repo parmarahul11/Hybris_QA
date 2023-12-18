@@ -15,7 +15,7 @@ import object_Repo_BAY.HomePage_EleBAY;
 public class CategoryNavigationHomepageTC_2_F_H extends BaseClassBay{
 
 	@Test(priority = 1/*invocationCount = 5*/)
-	public void navigateToAllCatagories() throws InterruptedException {
+	public void navigateToAllCatagoriesTC_2_F_H() throws InterruptedException {
 
 		// move mouse pointer to all categories icon
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
@@ -49,12 +49,12 @@ public class CategoryNavigationHomepageTC_2_F_H extends BaseClassBay{
 	}
 	*/
 	@Test(priority = 2)
-	public void clickOnAirConditioners() {
+	public void clickOnAirConditionersTC_2_F() {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		wUtil.clickUsingJSE(driver, hp.getAirConditionerIcon());
 	}
 	@Test(priority = 3)
-	public void NavigateToMyCart() {
+	public void NavigateToMyCartTC_2_I() {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.clickOnMyCartIcon();
 	}

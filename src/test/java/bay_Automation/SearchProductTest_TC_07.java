@@ -20,7 +20,7 @@ import object_Repo_BAY.PLP_page;
 public class SearchProductTest_TC_07 extends BaseClassBay{
 
 	@Test(dataProvider = "searchData")
-	public void searchProductAndCheckAvailability(String data) throws InterruptedException, AWTException {
+	public void searchProductAndCheckAvailability_TC_07(String data) throws InterruptedException, AWTException {
 
 		
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);

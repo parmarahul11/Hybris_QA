@@ -15,7 +15,7 @@ public class MyAccountUpdateProfileTC_23_1 extends BaseClassBay{
 
 
 	@Test
-	public void MyAccountUpdateProfileTest() throws InterruptedException {
+	public void MyAccountUpdateProfileTestTC_23_1() throws InterruptedException {
 
 		HomePage_EleBAY ma=new HomePage_EleBAY(driver);
 		//login as user

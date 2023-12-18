@@ -33,7 +33,7 @@ import object_Repo_BAY.HomePage_EleBAY;
 //@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class PLPScenario_TC_09 extends BaseClassBay {
 	@Test
-	public void plpGetAllProdName() throws AWTException, InterruptedException {
+	public void plpGetAllProdName_TC_09() throws AWTException, InterruptedException {
 
 		Robot robot=new Robot();		
 		robot.mouseWheel(10);
@@ -54,7 +54,7 @@ public class PLPScenario_TC_09 extends BaseClassBay {
 	////a[@class='product-details-cnt']/child::div[@class='price']
 
 	@Test
-	public void plpGridiew() {
+	public void plpGridiew_TC_09() {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("iphone");
@@ -65,7 +65,7 @@ public class PLPScenario_TC_09 extends BaseClassBay {
 		System.out.println("Products are listed are per Grid view !");
 	}
 	@Test
-	public void plpListiew() {
+	public void plpListiew_TC_09() {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("iphone");
@@ -77,7 +77,7 @@ public class PLPScenario_TC_09 extends BaseClassBay {
 		System.out.println("Products are listed are per List view !");
 	}
 	@Test
-	public void PriceOfProductVisibleTest() {
+	public void PriceOfProductVisibleTest_TC_09_a() {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("cooker");
@@ -98,7 +98,7 @@ public class PLPScenario_TC_09 extends BaseClassBay {
 	}
 
 	@Test
-	public void currencyOfProductValTest() {
+	public void currencyOfProductValTest_TC_09_b() {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("cooker");
@@ -121,7 +121,7 @@ public class PLPScenario_TC_09 extends BaseClassBay {
 	}
 //	public ExtentTest test;
 	@Test
-	public void compareIcon() throws IOException, InterruptedException  {
+	public void compareIcon_TC_09_c() throws IOException, InterruptedException  {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("cooker");
 		hp.clickOnSearchButton();
@@ -160,7 +160,7 @@ public class PLPScenario_TC_09 extends BaseClassBay {
 	}
 	
 	@Test
-	public void clickAndCollectTest() {
+	public void clickAndCollectTest_TC_09_d() {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("cooker");
 		hp.clickOnSearchButton();

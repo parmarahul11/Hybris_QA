@@ -79,7 +79,7 @@ public class PaymentWithVoucherAppliedTest_TC_16  {
 		return coupen;
 	}
 	@Test(dataProvider = "coupenData")
-	public void paymentWithVoucherTest(String coupen) throws IOException, InterruptedException, AWTException {
+	public void paymentWithVoucherTestTC_16(String coupen) throws IOException, InterruptedException, AWTException {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		LoginPage lp=new LoginPage(driver);

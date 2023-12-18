@@ -15,7 +15,7 @@ import object_Repo_BAY.HomePage_EleBAY;
 public class SortDropdownScenario_TC_08 extends BaseClassBay {
 
 	@Test(dataProvider = "dropdownOptions" )
-	public void sortProductsTest(String data) throws InterruptedException {
+	public void sortProductsTest_TC_08(String data) throws InterruptedException {
 		System.out.println("sort product started");
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("iphone 13");
