@@ -67,7 +67,7 @@ public class AddToCartAsLoginUserTC12_b extends BaseClassBay {
 	}
 	
 	@Test(dataProvider ="productList" )
-	public void verifyCartQuanityOnHomepage_TC02_I(String data) throws InterruptedException {
+	public void verifyCartQuanityOnHomepage_TC02_i(String data) throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		wUtil.waitForDom(driver);
 		//login as user

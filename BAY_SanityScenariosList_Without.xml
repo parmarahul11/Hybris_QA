@@ -19,6 +19,8 @@
 			</class>
 			<!-- TC-02 a) -->
 			<class name="BAY_HomePageScenario.ColourValTest_TC_02_a" />
+			<!-- TC-02 i) -->
+			<class name="BAY_HomePageScenario.VerifyCartQuanityOnHomepage_TC02_i" />
 			<!-- TC_02 b) -->
 			<class
 				name="bay_Automation.BannerScrollingHomepageTest_TC_02_b" />
