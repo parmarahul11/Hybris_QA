@@ -15,7 +15,7 @@ import generic.utilities.BaseClassBay;
 public class BannerScrollingHomepageTest_TC_02_b extends BaseClassBay {
 
 	@Test
-	public void BannerScrollingHomepageTestTC_02_b() throws Exception {
+	public void bannerScrollingHomepageTestTC_02_b() throws Exception {
 		Thread.sleep(2000);
 		Robot rb=new Robot();
 		rb.mouseWheel(5);

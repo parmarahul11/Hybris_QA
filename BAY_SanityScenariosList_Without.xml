@@ -23,7 +23,7 @@
 			<class name="BAY_HomePageScenario.VerifyCartQuanityOnHomepage_TC02_i" />
 			<!-- TC_02 b) -->
 			<class
-				name="bay_Automation.BannerScrollingHomepageTest_TC_02_b" />
+				name="bay_Automation.bannerScrollingHomepageTest_TC_02_b" />
 			<!-- TC 02 c) d) e) TC 04 -->
 			<class
 				name="BAY_HomePageScenario.HomepageHeaderScenariosTest_TC_02_c_d_e" />
