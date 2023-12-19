@@ -47,7 +47,7 @@
 			<class name="bay_Automation.OrderHistoryTest_TC_19">
 			</class>
 			<!-- TC 23 -->
-			<class name="bay_Automation.MyAccountAdderessBookTC_23">
+			<class name="bay_Automation.MyAccountAdderessBookTC_23_a">
 			</class>
 			<!-- TC 23-1 -->
 			<class name="bay_Automation.MyAccountUpdateProfileTC_23_1">
@@ -60,7 +60,7 @@
 			</class>
 			<!-- TC 14 & TC 31 -->
 			<class
-				name="bay_Automation.PaymentwithCreditSalesWithManualInt_TC_14_5">
+				name="bay_Automation.PaymentwithCreditSalesWithManualInt_TC_14_e">
 			</class>
 			<!-- TC 14 -->
 			<class

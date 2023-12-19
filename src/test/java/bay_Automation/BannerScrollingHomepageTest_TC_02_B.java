@@ -12,10 +12,10 @@ import org.testng.annotations.Test;
 
 import generic.utilities.BaseClassBay;
 //@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class BannerScrollingHomepageTest_TC_02_B extends BaseClassBay {
+public class BannerScrollingHomepageTest_TC_02_b extends BaseClassBay {
 
 	@Test
-	public void BannerScrollingHomepageTestTC_02_B() throws Exception {
+	public void BannerScrollingHomepageTestTC_02_b() throws Exception {
 		Thread.sleep(2000);
 		Robot rb=new Robot();
 		rb.mouseWheel(5);

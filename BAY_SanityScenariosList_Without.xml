@@ -12,7 +12,7 @@
 
 			<!-- TC_01 -->
 			<class
-				name="BAY_HomePageScenario.HomepageHeaderScenariosTest_TC_02_C_D_E">
+				name="BAY_HomePageScenario.HomepageHeaderScenariosTest_TC_02_c_d_e">
 				<methods>
 					<include name="navigateToHomepage_TC_01"></include>
 				</methods>
@@ -21,14 +21,14 @@
 			<class name="BAY_HomePageScenario.ColourValTest_TC_02_a" />
 			<!-- TC_02 b) -->
 			<class
-				name="bay_Automation.BannerScrollingHomepageTest_TC_02_B" />
+				name="bay_Automation.BannerScrollingHomepageTest_TC_02_b" />
 			<!-- TC 02 c) d) e) TC 04 -->
 			<class
-				name="BAY_HomePageScenario.HomepageHeaderScenariosTest_TC_02_C_D_E" />
+				name="BAY_HomePageScenario.HomepageHeaderScenariosTest_TC_02_c_d_e" />
 
 			<!-- TC 02 f) h) -->
 			<class
-				name="BAY_HomePageScenario.CategoryNavigationHomepageTC_2_F_H" />
+				name="BAY_HomePageScenario.CategoryNavigationHomepageTC_2_f_h_i" />
 
 			<!--TC_05 -->
 			<class

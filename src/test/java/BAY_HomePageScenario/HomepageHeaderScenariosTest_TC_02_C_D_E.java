@@ -19,7 +19,7 @@ import generic.utilities.ListenerImplementationWithExtentReport;
 import object_Repo_BAY.HomePage_EleBAY;
 
 //@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
-public class HomepageHeaderScenariosTest_TC_02_C_D_E extends BaseClassBay {
+public class HomepageHeaderScenariosTest_TC_02_c_d_e extends BaseClassBay {
 
 	@Test
 	public void navigateToHomepage_TC_01() {
@@ -38,7 +38,7 @@ public class HomepageHeaderScenariosTest_TC_02_C_D_E extends BaseClassBay {
 	}
 
 	@Test
-	public void ChangeToArebicTest_TC_02_E() throws InterruptedException {
+	public void ChangeToArebicTest_TC_02_c() throws InterruptedException {
 
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		wUtil.waitUntilElementToVisible(driver, hp.getChangeLangToArebic());
@@ -68,7 +68,7 @@ public class HomepageHeaderScenariosTest_TC_02_C_D_E extends BaseClassBay {
 	}
 
 	@Test
-	public void goToLoginPageAndbackToHomepage_TC_02_D() throws InterruptedException {
+	public void goToLoginPageAndbackToHomepage_TC_02_d() throws InterruptedException {
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);
 		hp.getLoginIcon().click();
 		Thread.sleep(2000);
@@ -81,7 +81,7 @@ public class HomepageHeaderScenariosTest_TC_02_C_D_E extends BaseClassBay {
 	}
 
 	@Test
-	public void captureBAYLogo_TC_02_C() throws IOException {
+	public void captureBAYLogo_TC_02_e() throws IOException {
 		ListenerImplementationWithExtentReport exReport = new ListenerImplementationWithExtentReport();
 
 		HomePage_EleBAY hp = new HomePage_EleBAY(driver);

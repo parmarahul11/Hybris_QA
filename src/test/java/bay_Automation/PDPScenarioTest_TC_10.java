@@ -34,7 +34,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 
 	@Test(dataProvider = "productList")
-	public void getProductName_TC_10(String data) {
+	public void getProductName_TC_10_a(String data) {
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("iphone 12");
@@ -53,7 +53,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 
 	@Test(dataProvider = "productList")
-	public void getSKUOfProduct_TC_10_1(String data) {
+	public void getSKUOfProduct_TC_10_b(String data) {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("iphone 12");
 		hp.clickOnSearchButton();
@@ -70,7 +70,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	 * @throws Exception 
 	 */
 	@Test(dataProvider = "productList")
-	public void clickAndCollectButtonTest_TC_10_1(String data) throws Exception {
+	public void clickAndCollectButtonTest_TC_10_c(String data) throws Exception {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("iphone 12");
 		hp.clickOnSearchButton();
@@ -90,7 +90,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 		}
 	}
 	@Test(dataProvider = "productList")
-	public void stockStatusCheck_TC_10_1(String data) throws Exception {
+	public void stockStatusCheck_TC_10_d(String data) throws Exception {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("iphone 12");
 		hp.clickOnSearchButton();
@@ -110,7 +110,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 
 	@Test(dataProvider = "productList")
-	public void getBriefDescpription_TC_10_1(String data)  {
+	public void getBriefDescpription_TC_10_e(String data)  {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("iphone 12");
 		hp.clickOnSearchButton();
@@ -124,7 +124,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 
 	@Test(dataProvider ="productList" )
-	public void quantityIncreaseByOne_TC_10_1(String data) {
+	public void quantityIncreaseByOne_TC_10_f(String data) {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("Apple IPhone 15Pro");
 		hp.clickOnSearchButton();
@@ -143,7 +143,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 	
 	@Test(dataProvider ="productList" )
-	public void quantityDecreaseByOne_TC_10_1(String data) throws InterruptedException {
+	public void quantityDecreaseByOne_TC_10_g(String data) throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("Apple IPhone 15Pro");
 		hp.clickOnSearchButton();
@@ -168,7 +168,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 
 	@Test(dataProvider ="productList" )
-	public void quantityManualUpdate_TC_10_1(String data) throws InterruptedException {
+	public void quantityManualUpdate_TC_10_h(String data) throws InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.sendTextOnSeachbar("Apple IPhone 15Pro");
 		hp.clickOnSearchButton();
@@ -188,7 +188,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 
 	@Test(dataProvider = "WarrentyXPath",dataProviderClass = DataproviderBAY.class)
-	public void warrentyDropdown_TC_10_1(String xpath) throws Exception {	
+	public void warrentyDropdown_TC_10_i(String xpath) throws Exception {	
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 
@@ -218,7 +218,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 
 	@Test
-	public void seeDetailsTest_TC_10_1() throws Exception {	
+	public void seeDetailsTest_TC_10_j() throws Exception {	
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 
@@ -242,7 +242,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 
 	@Test
-	public void productDescriptionTest_TC_10_1() throws Exception {	
+	public void productDescriptionTest_TC_10_k() throws Exception {	
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 
@@ -259,7 +259,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 
 	@Test
-	public void goToProductsSpecificationTest_TC_10_1() throws Exception {	
+	public void goToProductsSpecificationTest_TC_10_l() throws Exception {	
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 
@@ -276,7 +276,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 
 	}
 	@Test
-	public void reviewRatingTest_TC_10_1() throws Exception {	
+	public void reviewRatingTest_TC_10_m() throws Exception {	
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 
@@ -293,7 +293,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 
 	}	
 	@Test
-	public void faqTest_TC_10_1() throws Exception {	
+	public void faqTest_TC_10_n() throws Exception {	
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 
@@ -310,7 +310,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 
 	@Test
-	public void viewOfImageTest_TC_10_2() throws AWTException, InterruptedException {
+	public void viewOfImageTest_TC_10_o() throws AWTException, InterruptedException {
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.getLaptopsIcon().click();
 
@@ -332,7 +332,7 @@ public class PDPScenarioTest_TC_10 extends BaseClassBay {
 	}
 	
 	@Test
-	public void ZoomedViewOfProductTest_TC_10_3() throws IOException, InterruptedException {
+	public void ZoomedViewOfProductTest_TC_10_p() throws IOException, InterruptedException {
 		
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		hp.getLaptopsIcon().click();

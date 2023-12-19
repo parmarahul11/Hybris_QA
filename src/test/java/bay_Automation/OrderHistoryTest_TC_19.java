@@ -21,7 +21,7 @@ import object_Repo_BAY.ShippingAddressPage;
 //@Listeners(generic.utilities.ListenerImplementationWithExtentReport.class)
 public class OrderHistoryTest_TC_19 extends BaseClassBay{	
 	@Test
-	public void orderHistoryTest_TC_19() throws InterruptedException, IOException{
+	public void orderHistoryTest_TC_19_a() throws InterruptedException, IOException{
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		LoginPage lp=new LoginPage(driver);
@@ -94,7 +94,7 @@ public class OrderHistoryTest_TC_19 extends BaseClassBay{
 	}
 
 	@Test
-	public void maxOrderToBeListedPerPageTest_TC_19() throws InterruptedException, IOException{
+	public void maxOrderToBeListedPerPageTest_TC_19_b() throws InterruptedException, IOException{
 
 		HomePage_EleBAY hp=new HomePage_EleBAY(driver);
 		LoginPage lp=new LoginPage(driver);
